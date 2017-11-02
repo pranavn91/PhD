@@ -1,0 +1,87 @@
+BFS
+
+step 1: initialize each vertex (not including source) to color = white, 
+sequence number = infinity and parent = null
+
+step 2: initialize source to color = gray, sequence number = 0 and 
+        parent = nil
+
+step 3: initialize an empty queue
+
+step 4: enqueue source node in queue
+
+step 5: while queue is not empty
+		   5a:   dequeue from queue and store in a variable 'u'
+		   5b:   for each vertex adjacent to the node in variable 'u' do 
+						1-   if color is white i.e unvisited yet
+						2-   turn color to gray
+						3-   update sequence number of node to sequence number of   
+							 predecessor + 1 i.e. u.d + 1
+						4-   update parent of node to predecessor
+						5-   enqueue the node
+						
+			5c -- color u as black 'to mark visited'.
+	
+	
+	
+DFS
+
+Step 1: start function DFS(G)
+Step 2: for each vertex u in graph set color to WHITE and parent of u to NIL
+Step 3: initialize variable time as 0
+Step 4: for each vertex u in graph if color of u is white then call function DFS-VISIT(G,u)
+
+
+
+DFS-VISIT
+
+Step 1: create a function DFS-VISIT(G,u)
+Step 2: increment time by 1 ; to keep track of sequence of nodes
+Step 3: set sequence of u as time and its color as GRAY
+Step 4: for each vertex v in graph G adjacent to u check if color of v is white
+              4a:  if yes then set parent of v as = u and call function DFS-visit on v as  DFS-VISIT(G,v)
+step 5: u.color = BLACK // blacken u; it is finished
+step 6: time = time + 1 // update finishing time
+step 7: u.f = time // set finishing time to the visited node.
+
+
+KRUSKALS
+
+Step 1: create a function  with graph and weights FUNCTION MST_KRUSKAL(G,w)
+Step 2: initialize an empty set A
+Step 3: for each vertex in the graph create sets individually i.e. {1}, {2} .. using     make-set(v)
+Step 4: sort the edge of G into non decreasing order of weight
+Step 5: for each edge called E that starts and ends with nodes -> (u,v) in graph  G
+          5a -->  Take E from the sorted list
+          b -->   check whether set of node u and node v are same using findset(u) ≠ findset(v)
+          c --->   if they are not same then put their sets in A = A ∪ {(u,v)}
+          d --> combine them as union(u,v)
+Step 6:  return A;
+
+
+
+
+Prim's Algorithm
+
+
+Step 1: create a function named PRIMS(G,w) to accept both graph and weights of edges in it
+Step 2: initialise a set A to null
+Step 3: for each vertex in the graph set key[v] = ∞ and parent[v] = null
+Step 4: choose a source node 'r' and set key to 0
+Step 5: create a priority queue called Q and copy all vertex in it V
+Step 6: iterate while Q is not empty
+        a---> extract minimum value from Q and store in 'u'.
+        b ---> delete u from the Queue
+        c---> check if parent of u is not null and then add u and its parent to set A
+       
+Step 7: iterate over each vertex 'v' that is adjacent to 'u'
+    a----> check that if v belongs to Q and weight of edge (u,v) is less than key[v] 
+		   then modify u as parent of 'v' and weight of edge (u,v) as key of v 
+       
+Step 8: return A
+
+
+
+
+
+
