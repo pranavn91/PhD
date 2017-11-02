@@ -1,0 +1,90 @@
+\begin{thebibliography}{10}
+
+\bibitem{ppr:1}
+Yanchi Liu, Zhongmou Li, Hui Xiong, Xuedong Gao, Junjie Wu, and Sen Wu.
+\newblock Understanding and enhancement of internal clustering validation
+  measures.
+\newblock {\em IEEE transactions on cybernetics}, 43(3):982--994, 2013.
+
+\bibitem{ppr:2}
+Ariel~E Baya and Pablo~M Granitto.
+\newblock How many clusters: A validation index for arbitrary-shaped clusters.
+\newblock {\em IEEE/ACM Transactions on Computational Biology and
+  Bioinformatics (TCBB)}, 10(2):401--414, 2013.
+
+\bibitem{ppr:3}
+Gongde Guo, Lifei Chen, Yanfang Ye, and Qingshan Jiang.
+\newblock Cluster validation method for determining the number of clusters in
+  categorical sequences.
+\newblock {\em IEEE transactions on neural networks and learning systems},
+  2016.
+
+\bibitem{ppr:4}
+Rui Xu and Donald Wunsch.
+\newblock Survey of clustering algorithms.
+\newblock {\em IEEE Transactions on neural networks}, 16(3):645--678, 2005.
+
+\bibitem{ppr:5}
+Anil~K Jain.
+\newblock Data clustering: 50 years beyond k-means.
+\newblock {\em Pattern recognition letters}, 31(8):651--666, 2010.
+
+\bibitem{ppr:6}
+Deepayan Chakrabarti, Ravi Kumar, and Andrew Tomkins.
+\newblock Evolutionary clustering.
+\newblock In {\em Proceedings of the 12th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 554--560. ACM, 2006.
+
+\bibitem{ppr:7}
+Eduardo~Raul Hruschka, Ricardo~JGB Campello, Alex~A Freitas, et~al.
+\newblock A survey of evolutionary algorithms for clustering.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics, Part C
+  (Applications and Reviews)}, 39(2):133--155, 2009.
+
+\bibitem{ppr:9}
+Daniel Bratton and James Kennedy.
+\newblock Defining a standard for particle swarm optimization.
+\newblock In {\em Swarm Intelligence Symposium, 2007. SIS 2007. IEEE}, pages
+  120--127. IEEE, 2007.
+
+\bibitem{ppr:11}
+Jiawei Han, Jian Pei, and Micheline Kamber.
+\newblock {\em Data mining: concepts and techniques}.
+\newblock Elsevier, 2011.
+
+\bibitem{ppr:12}
+Lori Dalton, Virginia Ballarin, and Marcel Brun.
+\newblock Clustering algorithms: on learning, validation, performance, and
+  applications to genomics.
+\newblock {\em Current genomics}, 10(6):430--445, 2009.
+
+\bibitem{ppr:8}
+Russell Eberhart and James Kennedy.
+\newblock A new optimizer using particle swarm theory.
+\newblock In {\em Micro Machine and Human Science, 1995. MHS'95., Proceedings
+  of the Sixth International Symposium on}, pages 39--43. IEEE, 1995.
+
+\bibitem{ppr:10}
+Maurice Clerc.
+\newblock {\em Particle swarm optimization}, volume~93.
+\newblock John Wiley \& Sons, 2010.
+
+\bibitem{ppr:15}
+Rainer Storn and Kenneth Price.
+\newblock Differential evolution--a simple and efficient heuristic for global
+  optimization over continuous spaces.
+\newblock {\em Journal of global optimization}, 11(4):341--359, 1997.
+
+\bibitem{ppr:14}
+Marina Meil{\u{a}}.
+\newblock Comparing clusterings—an information based distance.
+\newblock {\em Journal of multivariate analysis}, 98(5):873--895, 2007.
+
+\bibitem{ppr:13}
+Christian Hennig.
+\newblock How many bee species? a case study in determining the number of
+  clusters.
+\newblock In {\em Data Analysis, Machine Learning and Knowledge Discovery},
+  pages 41--49. Springer, 2014.
+
+\end{thebibliography}
