@@ -1,0 +1,29 @@
+\select@language {english}
+\contentsline {chapter}{Contents}{i}{chapter*.1}
+\contentsline {chapter}{List of Figures}{ii}{chapter*.2}
+\contentsline {chapter}{List of Tables}{iii}{chapter*.3}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Overview of the chapters}{3}{section.1.1}
+\contentsline {chapter}{\numberline {2}Literature Review}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Induction machine control}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}Field orientation control (FOC) of induction machine}{5}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Direct field orientation (DFO)}{8}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Indirect field orientation control (IFOC)}{9}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Variable speed control using advance control algorithms}{11}{section.2.3}
+\contentsline {section}{\numberline {2.4}Conclusion}{15}{section.2.4}
+\contentsline {chapter}{\numberline {3}Field Oriented Control of Induction Motor}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{17}{section.3.1}
+\contentsline {section}{\numberline {3.2}Transient stability assessment: Modeling issues}{19}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Integrability and Synchronization}{20}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Machines as Kuramoto oscillators}{21}{section.3.3}
+\contentsline {section}{\numberline {3.4}Behaviour and Integrability of Kuramoto oscillators}{24}{section.3.4}
+\contentsline {section}{\numberline {3.5}Conclusions and future scope}{27}{section.3.5}
+\contentsline {chapter}{\numberline {4}Application of Adaptive Network Approach for Power Grid Operations: Synchronization, Clustering And\\ Self-organized Criticality}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{29}{section.4.1}
+\contentsline {section}{\numberline {4.2}Adaptive network theory}{31}{section.4.2}
+\contentsline {section}{\numberline {4.3}Adaptive Approach to Synchronization}{33}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}The Classical Model : Kuramoto oscillators}{34}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}One axis Generator model with exciters }{36}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Self-Organized Criticality}{37}{section.4.4}
+\contentsline {section}{\numberline {4.5}Cluster Formation}{39}{section.4.5}
+\contentsline {section}{\numberline {4.6}Conclusions and future scope}{41}{section.4.6}

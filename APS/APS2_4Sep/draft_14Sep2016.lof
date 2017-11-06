@@ -1,0 +1,34 @@
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Neural Network Architecture with Backpropagation\relax }}{8}{figure.caption.5}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Performance of Gradient Boosted Trees\relax }}{11}{figure.caption.9}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Performance of Greedy Ensembles\relax }}{12}{figure.caption.11}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Histogram of Degree Distribution\relax }}{21}{figure.caption.14}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Artificial Benchmark Datasets for Clustering\relax }}{34}{figure.caption.25}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Clustering based on K-Means\relax }}{35}{figure.caption.27}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Clustering based on K-Means++\relax }}{35}{figure.caption.28}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Clustering based on Kernel K-Means\relax }}{36}{figure.caption.29}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Hierarchical Clustering based on Single linkage\relax }}{37}{figure.caption.30}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Hierarchical Clustering based on Average linkage\relax }}{37}{figure.caption.31}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Hierarchical Clustering based on Complete linkage\relax }}{38}{figure.caption.32}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Hierarchical Clustering based on Centroid linkage\relax }}{38}{figure.caption.33}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Hierarchical Clustering based on Ward’s minimum variance method\relax }}{39}{figure.caption.34}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Fuzzy C-Means Clustering\relax }}{40}{figure.caption.35}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Clustering result of Model based clustering Algorithm\relax }}{40}{figure.caption.36}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Clustering result of DBSCAN Algorithm\relax }}{41}{figure.caption.37}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Clustering result of OPTICS Algorithm\relax }}{41}{figure.caption.38}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Unsupervised Affinity Propagation Algorithm\relax }}{42}{figure.caption.39}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Supervised Affinity Propagation Algorithm\relax }}{42}{figure.caption.40}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Spectral Clustering\relax }}{43}{figure.caption.41}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Bipartite Attribute Affiliation Graph\relax }}{49}{figure.caption.43}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Artificially generated Network dataset\relax }}{52}{figure.caption.45}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Community structures in Network\relax }}{55}{figure.caption.51}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Community structures in Network\relax }}{55}{figure.caption.52}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Community structures in Network\relax }}{55}{figure.caption.53}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Clustering Structure using Variant of BIGCLAM\relax }}{56}{figure.caption.55}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

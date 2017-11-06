@@ -1,0 +1,28 @@
+\BOOKMARK [0][]{chapter*.1}{Contents}{}% 1
+\BOOKMARK [0][]{chapter*.2}{List of Figures}{}% 2
+\BOOKMARK [0][]{chapter*.3}{List of Tables}{}% 3
+\BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 4
+\BOOKMARK [1][]{section.1.1}{1.1 Overview of the chapters}{chapter.1}% 5
+\BOOKMARK [0][]{chapter.2}{2 Literature Review}{}% 6
+\BOOKMARK [1][]{section.2.1}{2.1 Induction machine control}{chapter.2}% 7
+\BOOKMARK [1][]{section.2.2}{2.2 Field orientation control \(FOC\) of induction machine}{chapter.2}% 8
+\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Direct field orientation \(DFO\)}{section.2.2}% 9
+\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Indirect field orientation control \(IFOC\)}{section.2.2}% 10
+\BOOKMARK [1][]{section.2.3}{2.3 Variable speed control using advance control algorithms}{chapter.2}% 11
+\BOOKMARK [1][]{section.2.4}{2.4 Conclusion}{chapter.2}% 12
+\BOOKMARK [0][]{chapter.3}{3 Field Oriented Control of Induction Motor}{}% 13
+\BOOKMARK [1][]{section.3.1}{3.1 Introduction}{chapter.3}% 14
+\BOOKMARK [1][]{section.3.2}{3.2 Transient stability assessment: Modeling issues}{chapter.3}% 15
+\BOOKMARK [2][]{subsection.3.2.1}{3.2.1 Integrability and Synchronization}{section.3.2}% 16
+\BOOKMARK [1][]{section.3.3}{3.3 Machines as Kuramoto oscillators}{chapter.3}% 17
+\BOOKMARK [1][]{section.3.4}{3.4 Behaviour and Integrability of Kuramoto oscillators}{chapter.3}% 18
+\BOOKMARK [1][]{section.3.5}{3.5 Conclusions and future scope}{chapter.3}% 19
+\BOOKMARK [0][]{chapter.4}{4 Application of Adaptive Network Approach for Power Grid Operations: Synchronization, Clustering And Self-organized Criticality}{}% 20
+\BOOKMARK [1][]{section.4.1}{4.1 Introduction}{chapter.4}% 21
+\BOOKMARK [1][]{section.4.2}{4.2 Adaptive network theory}{chapter.4}% 22
+\BOOKMARK [1][]{section.4.3}{4.3 Adaptive Approach to Synchronization}{chapter.4}% 23
+\BOOKMARK [2][]{subsection.4.3.1}{4.3.1 The Classical Model : Kuramoto oscillators}{section.4.3}% 24
+\BOOKMARK [2][]{subsection.4.3.2}{4.3.2 One axis Generator model with exciters }{section.4.3}% 25
+\BOOKMARK [1][]{section.4.4}{4.4 Self-Organized Criticality}{chapter.4}% 26
+\BOOKMARK [1][]{section.4.5}{4.5 Cluster Formation}{chapter.4}% 27
+\BOOKMARK [1][]{section.4.6}{4.6 Conclusions and future scope}{chapter.4}% 28

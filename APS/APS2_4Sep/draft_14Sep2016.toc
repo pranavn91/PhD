@@ -1,0 +1,86 @@
+\select@language {english}
+\contentsline {chapter}{Contents}{v}{chapter*.1}
+\contentsline {chapter}{List of Figures}{viii}{chapter*.2}
+\contentsline {chapter}{List of Tables}{ix}{chapter*.3}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Online Social Networks: Research Issues}{2}{section.1.1}
+\contentsline {chapter}{\numberline {2}Modeling influence on a Social Network using Interaction Characteristics}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Related Work}{5}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Twitterrank: finding topic-sensitive influential twitterers}{5}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Finding influencers using social capital}{5}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Geo-social Influence Spanning Maximization}{5}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Mining Time-Dependent Influential Users in Facebook Fans Group}{6}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Mathematical Model}{6}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Calculation of Influence Score}{7}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Model Representation}{7}{subsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.2.1}Artificial Neural Networks}{7}{subsubsection.2.3.2.1}
+\contentsline {subsubsection}{\numberline {2.3.2.2}Cost Function - Artificial Neural Networks}{7}{subsubsection.2.3.2.2}
+\contentsline {subsubsection}{\numberline {2.3.2.3}Gradient boosted trees}{8}{subsubsection.2.3.2.3}
+\contentsline {subsubsection}{\numberline {2.3.2.4}Gradient Boosted trees}{8}{subsubsection.2.3.2.4}
+\contentsline {subsection}{\numberline {2.3.3}Influence Ranking Algorithm}{8}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Experimental Study}{9}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Experiment setting}{9}{subsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.1.1}Dataset}{9}{subsubsection.2.4.1.1}
+\contentsline {subsection}{\numberline {2.4.2}Results}{9}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Conclusion}{12}{section.2.5}
+\contentsline {chapter}{\numberline {3}A Comparative Analysis of Community Detection Algorithms on Social Networks}{14}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{14}{section.3.1}
+\contentsline {section}{\numberline {3.2}Community Detection Algorithms}{16}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Walktrap - Computing communities in large networks using random walks}{16}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Finding community structure in very large networks}{17}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Finding and evaluating community structure in networks}{17}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Near linear time algorithm to detect community structures in large-scale networks}{17}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Fast unfolding of communities in large networks}{18}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}Statistical mechanics of community detection}{19}{subsection.3.2.6}
+\contentsline {subsection}{\numberline {3.2.7}Finding community structure in networks using the eigenvectors of matrices}{19}{subsection.3.2.7}
+\contentsline {subsection}{\numberline {3.2.8}Maps of random walks on complex networks reveal community structure}{19}{subsection.3.2.8}
+\contentsline {section}{\numberline {3.3}Experiments}{20}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Dataset}{20}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Results}{21}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Edit Distance metric}{22}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Conclusion}{23}{section.3.4}
+\contentsline {chapter}{\numberline {4}Empirical Analysis of Data Clustering Algorithms}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}Types of Clustering Algorithms}{26}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Partition based clustering algorithms}{26}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Hierarchical Clustering algorithms}{27}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Fuzzy clustering}{29}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Model Based Clustering Algorithms}{30}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Grid Based Clustering Algorithm}{30}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}Density based clustering algorithms}{31}{subsection.4.2.6}
+\contentsline {subsection}{\numberline {4.2.7}Affinity Propagation Clustering}{32}{subsection.4.2.7}
+\contentsline {subsection}{\numberline {4.2.8}Affiliation Graph Model}{32}{subsection.4.2.8}
+\contentsline {subsection}{\numberline {4.2.9}Spectral Clustering}{33}{subsection.4.2.9}
+\contentsline {section}{\numberline {4.3}Experiments}{34}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Dataset}{34}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Experimental Results}{34}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}Partition based clustering Algorithm}{34}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}Hierarchical clustering Algorithms}{36}{subsubsection.4.3.2.2}
+\contentsline {subsubsection}{\numberline {4.3.2.3}Fuzzy clustering Algorithm}{39}{subsubsection.4.3.2.3}
+\contentsline {subsubsection}{\numberline {4.3.2.4}Model based clustering Algorithm}{40}{subsubsection.4.3.2.4}
+\contentsline {subsubsection}{\numberline {4.3.2.5}Density based Clustering Algorithms}{41}{subsubsection.4.3.2.5}
+\contentsline {subsubsection}{\numberline {4.3.2.6}Affinity Propagation Clustering}{42}{subsubsection.4.3.2.6}
+\contentsline {subsubsection}{\numberline {4.3.2.7}Spectral Clustering}{43}{subsubsection.4.3.2.7}
+\contentsline {subsection}{\numberline {4.3.3}Summary of Results}{43}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Conclusion}{43}{section.4.4}
+\contentsline {chapter}{\numberline {5}Community Detection using Node Attributes: A Non-Negative Matrix Factorization Approach.}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{45}{section.5.1}
+\contentsline {section}{\numberline {5.2}Related Work}{46}{section.5.2}
+\contentsline {section}{\numberline {5.3}Mathematical Model}{48}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Calculate the latent weights of the attributes}{49}{subsection.5.3.1}
+\contentsline {section}{\numberline {5.4}Experiments}{51}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Dataset and Evaluation Criteria}{51}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Experimental Results}{52}{subsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.2.1}InfoMap}{52}{subsubsection.5.4.2.1}
+\contentsline {subsubsection}{\numberline {5.4.2.2}Leading Eigenvector}{52}{subsubsection.5.4.2.2}
+\contentsline {subsubsection}{\numberline {5.4.2.3}Label Propagation}{53}{subsubsection.5.4.2.3}
+\contentsline {subsubsection}{\numberline {5.4.2.4}Walktrap}{53}{subsubsection.5.4.2.4}
+\contentsline {subsubsection}{\numberline {5.4.2.5}Spinglass and Clique Percolation}{54}{subsubsection.5.4.2.5}
+\contentsline {subsection}{\numberline {5.4.3}Community Structures}{54}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Variation of BIGCLAM}{55}{subsection.5.4.4}
+\contentsline {section}{\numberline {5.5}Conclusion}{56}{section.5.5}
+\contentsline {chapter}{\numberline {6}Summary}{57}{chapter.6}
+\contentsline {section}{\numberline {6.1}Future Work}{57}{section.6.1}
+\contentsline {chapter}{\numberline {7}Publications}{58}{chapter.7}
+\contentsline {chapter}{References}{59}{chapter*.56}

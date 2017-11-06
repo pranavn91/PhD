@@ -1,0 +1,269 @@
+
+
+ \documentclass[oneside,11pt]{Classes/CUEDthesisPSnPDF}
+
+
+
+
+\degree{Doctor of Philosophy}
+\degreedate{July 2017}
+
+
+\hbadness=10000
+\hfuzz=5pt
+
+% Put all the style files you want in the directory StyleFiles and usepackage like this:
+
+%\usepackage{StyleFiles/watermark}
+\usepackage{watermark}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf}
+\usepackage[version=3]{mhchem}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{nomencl}
+\usepackage{natbib}
+\usepackage{etoolbox}
+\usepackage{cases}
+\usepackage{longtable}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[english]{babel}
+\usepackage{subcaption}
+
+%titling,url,array}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{conj}{Conjecture}[section]
+\newtheorem{exmp}{Example}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{remark}[theorem]{Remark}
+
+\begin{document}
+%\maketitle
+
+\begin{titlepage}
+	\begin{center}
+	
+	\begin{large}
+	Annual Progress Seminar - I Report\\ on\\
+	\end{large}			
+		 
+		
+		\vspace*{1\baselineskip}
+		\begin{huge}
+			
+		Social Network Analytics: Determining latent characteristics in data\\
+		\end{huge}
+			
+		\vspace*{1\baselineskip}
+		Submitted\\
+in partial fulfillment of\\
+the requirements of the degree of\\
+\vspace*{1\baselineskip}
+		\begin{large}
+		Doctor of Philosophy (Computer Engineering) \\
+		\end{large}
+		\vspace*{1\baselineskip}
+		
+		by\\
+		\vspace*{1\baselineskip}
+		\begin{large}
+			Pranav Nerurkar\\ 
+		\end{large}
+		(169070001)\\
+		2016 - 2017\\
+		\vspace*{1\baselineskip}
+		Under Guidance Of\\
+		\vspace*{1\baselineskip}
+		\begin{large}
+Dr. S. G. Bhirud (Guide)\\
+Dr. M. M. Chandane (Co - Guide)\\
+\end{large}
+		
+		
+	\end{center}
+
+
+\begin{center}\includegraphics[scale=0.3]{VJTIM.jpg}\end{center}
+\vspace*{1\baselineskip}
+
+\begin{center}
+\begin{Large}
+Department of Computer Engineering \& Information Technology\\
+Veermata Jijabai Technological Institute, Mumbai - 400019\\  
+(Autonomous Institute Affiliated to University of Mumbai)\\
+2016 - 2017
+\end{Large}
+\end{center}
+\end{titlepage}
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\rhead{} \chead{} \lhead{\leftmark} \rfoot{\footnotesize \thepage} \cfoot{} \lfoot{\footnotesize  \begin{scriptsize}
+Social Network Analytics: Determining latent characteristics in data
+\end{scriptsize}\\\begin{scriptsize}
+Pranav Nerurkar
+\end{scriptsize}(\begin{scriptsize}
+169070001
+\end{scriptsize})}
+\frontmatter % book mode only
+\begin{titlepage}
+
+\vspace*{1\baselineskip}
+\vspace*{1\baselineskip}
+ \begin{center} \begin{Huge} \textbf{CERTIFICATE}\end{Huge} \end{center} 
+\vspace*{1\baselineskip}\vspace*{1\baselineskip} 
+
+This is to certify that \textbf{Mr. Pranav. A. Nerurkar (169070001)} , a student of \textbf{Doctor of Philosophy (Computer Engineering)},
+has completed the Annual Progress Seminar held in September 2017 for the research work entitled,  
+”
+\textbf{Social Network Analytics: Determining latent characteristics in data}
+” to our
+satisfaction. 
+
+\vspace*{13\baselineskip}
+\begin{center}
+Dr. S. G. Bhirud   \hspace{2in}          Dr. V. B. Nikam                              
+
+\hspace{0.2in} Ph. D. Supervisor (CMPN)     \hspace{0.5in}      Head, Department of Computer Engineering \\ 
+\hspace{3in} \& Information Technology   
+
+\end{center}
+
+\vspace*{1\baselineskip}
+\vspace*{1\baselineskip}
+
+\begin{center}
+Date:      \hspace{3in}      Place:                              
+
+ 
+\end{center}
+\end{titlepage}
+
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+%Certificate part(Third Page)
+\vspace*{2\baselineskip}
+\begin{center} \begin{Huge} \textbf{CERTIFICATE}\end{Huge} \end{center}
+\vspace*{1\baselineskip}\vspace*{1\baselineskip} 
+
+The Annual Progress Seminar Report for the research work entitled , ”
+\textbf{Social Network Analytics: Determining latent characteristics in data}
+” submitted by \textbf{Mr. Pranav. A. Nerurkar (169070001)}, is found to be satisfactory and is approved for the degree of \textbf{Doctor of Philosophy (Computer Engineering)} from Veermata Jijabai Technological Institute affiliated to University of Mumbai.
+\vspace*{8\baselineskip}
+\begin{center}
+\end{center} 
+\hspace{0in}Supervisor: \hspace{0.6in}Co-Supervisor: 
+\hspace{0.6in}Examiner 1:   \hspace{0.6in} Examiner 2:\\
+\hspace{0in}Dr.S.G. Bhirud \hspace{0.35in}Dr.M.M. Chandane
+\hspace{0.25in}
+\line(1,0){60}       \hspace{0.6in}          \line(1,0){60} \\
+\hspace{0in}Guide   \hspace{0.96in}Co-Guide                 
+\hspace{0.96in}\line(1,0){60}       \hspace{0.61in}        \line(1,0){60} \\
+%\vspace*{0\baselineskip}   
+ 
+\newpage
+
+%Certificate part(Third Page)
+\vspace*{3\baselineskip}
+\begin{center}\begin{Large}\textbf{Declaration of the Student}\end{Large}\end{center}
+\vspace*{2\baselineskip}
+\begin{large}
+I declare that this written submission represents my ideas in my own words and where others' ideas or
+words have been included, I have adequately cited and referenced the original sources.
+\vspace*{1\baselineskip}
+I also declare that I have adhered to all principles of academic honesty and integrity and have not
+misrepresented or fabricated or falsified any idea / data / fact / source in my submission. 
+\vspace*{1\baselineskip}
+I understand that any violation of the above will be cause for disciplinary action by the Institute and can
+also evoke penal action from the sources which have thus not been properly cited or from whom proper
+permission has not been taken when needed. 
+\end{large}
+\vspace*{13\baselineskip}
+
+ 
+\vspace*{0\baselineskip}
+Pranav Nerurkar \\
+\hspace{0.5in}(Roll no :   169070001)   \hspace{2.5in} Date: \line(1,0){100}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\include{Statement/statement}
+\include{Acknowledgement/acknowledgement}
+%\include{Certificate/certificate}
+%\include{Certificate1/certificate1}
+%\include{Dedication/dedication}
+%\include{Approval/approval}
+\include{Abstract/abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+%\include{Nomenclature/nomenclature}
+%\printnomenclature  %% Print the nomenclature
+%addcontentsline{toc}{chapter}{Nomenclature}
+\mainmatter % book mode only
+\include{Introduction/introduction}
+%\include{Chapter0/chapter0}
+\include{Chapter1/chapter1}
+\include{Chapter2/chapter2}
+\include{Chapter3/chapter3}
+\include{Chapter4/chapter4} 
+
+%\include{Chapter5/chapter5}
+%\include{Chapter6/chapter6}
+%\include{Chapter7/chapter7}
+\include{Conclusions/conclusions}
+\include{Publication/publication}
+%\include{Ref/ref}
+%
+%\backmatter % book mode only
+%\appendix
+%\include{Appendix1/appendix1}
+%\include{Appendix2/appendix2}
+\setcitestyle{numbers}
+\bibliographystyle{plainnat}
+%\bibliographystyle{Classes/CUEDbiblio}
+
+
+%\bibliographystyle{Classes/jmb} % bibliography style
+
+\renewcommand{\bibname}{References} % changes default name Bibliography to References
+\bibliography{References/references} % References file 
+
+%\bibliography{References/references} 
+%\bibliographystyle{ieeetr}
+
+%\includepdf[pages=-]{paper_imc1}
+%\includepdf[angle=90]{certi_imc}
+%\includepdf{IFAC_email}
+%\includepdf[pages=-]{ifacconf.pdf}
+%\includepdf{IEEE_Trans_acceptance}
+%\includepdf[pages=-]{trans_smartgrid}
+\end{document}

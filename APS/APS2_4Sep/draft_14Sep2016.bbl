@@ -1,0 +1,351 @@
+\begin{thebibliography}{56}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aggarwal(2011)]{aps:1}
+Charu~C Aggarwal.
+\newblock An introduction to social network data analytics.
+\newblock \emph{Social network data analytics}, pages 1--15, 2011.
+
+\bibitem[Balasubramanyan and Cohen(2011)]{aps:52}
+Ramnath Balasubramanyan and William~W Cohen.
+\newblock Block-lda: Jointly modeling entity-annotated text and entity-entity
+  links.
+\newblock In \emph{Proceedings of the 2011 SIAM International Conference on
+  Data Mining}, pages 450--461. SIAM, 2011.
+
+\bibitem[Bezdek et~al.(1984)Bezdek, Ehrlich, and Full]{aps:45}
+James~C Bezdek, Robert Ehrlich, and William Full.
+\newblock Fcm: The fuzzy c-means clustering algorithm.
+\newblock \emph{Computers \& Geosciences}, 10\penalty0 (2-3):\penalty0
+  191--203, 1984.
+
+\bibitem[Blondel et~al.(2008)Blondel, Guillaume, Lambiotte, and
+  Lefebvre]{aps:34}
+Vincent~D Blondel, Jean-Loup Guillaume, Renaud Lambiotte, and Etienne Lefebvre.
+\newblock Fast unfolding of communities in large networks.
+\newblock \emph{Journal of statistical mechanics: theory and experiment},
+  2008\penalty0 (10):\penalty0 P10008, 2008.
+
+\bibitem[Bradley et~al.(1998)Bradley, Fayyad, Reina, et~al.]{aps:41}
+Paul~S Bradley, Usama~M Fayyad, Cory Reina, et~al.
+\newblock Scaling clustering algorithms to large databases.
+\newblock In \emph{KDD}, pages 9--15, 1998.
+
+\bibitem[Chapelle et~al.(2009)Chapelle, Scholkopf, and Zien]{aps:5}
+Olivier Chapelle, Bernhard Scholkopf, and Alexander Zien.
+\newblock Semi-supervised learning (chapelle, o. et al., eds.; 2006)[book
+  reviews].
+\newblock \emph{IEEE Transactions on Neural Networks}, 20\penalty0
+  (3):\penalty0 542--542, 2009.
+
+\bibitem[Chen et~al.(2010)Chen, Wang, and Wang]{aps:12}
+Wei Chen, Chi Wang, and Yajun Wang.
+\newblock Scalable influence maximization for prevalent viral marketing in
+  large-scale social networks.
+\newblock In \emph{Proceedings of the 16th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 1029--1038. ACM, 2010.
+
+\bibitem[Chen et~al.(2012)Chen, Cheng, He, and Jiang]{aps:21}
+Wenlong Chen, Shaoyin Cheng, Xing He, and Fan Jiang.
+\newblock Influencerank: An efficient social influence measurement for millions
+  of users in microblog.
+\newblock In \emph{Cloud and Green Computing (CGC), 2012 Second International
+  Conference on}, pages 563--570. IEEE, 2012.
+
+\bibitem[Clauset et~al.(2004)Clauset, Newman, and Moore]{aps:30}
+Aaron Clauset, Mark~EJ Newman, and Cristopher Moore.
+\newblock Finding community structure in very large networks.
+\newblock \emph{Physical review E}, 70\penalty0 (6):\penalty0 066111, 2004.
+
+\bibitem[Clauset et~al.(2008)Clauset, Moore, and Newman]{aps:25}
+Aaron Clauset, Cristopher Moore, and Mark~EJ Newman.
+\newblock Hierarchical structure and the prediction of missing links in
+  networks.
+\newblock \emph{arXiv preprint arXiv:0811.0484}, 2008.
+
+\bibitem[Dhillon et~al.(2004)Dhillon, Guan, and Kulis]{aps:40}
+Inderjit~S Dhillon, Yuqiang Guan, and Brian Kulis.
+\newblock Kernel k-means: spectral clustering and normalized cuts.
+\newblock In \emph{Proceedings of the tenth ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 551--556. ACM, 2004.
+
+\bibitem[Ester et~al.(1996)Ester, Kriegel, Sander, Xu, et~al.]{aps:47}
+Martin Ester, Hans-Peter Kriegel, J{\"o}rg Sander, Xiaowei Xu, et~al.
+\newblock A density-based algorithm for discovering clusters in large spatial
+  databases with noise.
+\newblock In \emph{Kdd}, volume~96, pages 226--231, 1996.
+
+\bibitem[Estivill-Castro(2002)]{aps:6}
+Vladimir Estivill-Castro.
+\newblock Why so many clustering algorithms: a position paper.
+\newblock \emph{ACM SIGKDD explorations newsletter}, 4\penalty0 (1):\penalty0
+  65--75, 2002.
+
+\bibitem[Fahad et~al.(2014)Fahad, Alshatri, Tari, Alamri, Khalil, Zomaya,
+  Foufou, and Bouras]{aps:2}
+Adil Fahad, Najlaa Alshatri, Zahir Tari, Abdullah Alamri, Ibrahim Khalil,
+  Albert~Y Zomaya, Sebti Foufou, and Abdelaziz Bouras.
+\newblock A survey of clustering algorithms for big data: Taxonomy and
+  empirical analysis.
+\newblock \emph{IEEE transactions on emerging topics in computing}, 2\penalty0
+  (3):\penalty0 267--279, 2014.
+
+\bibitem[Fani and Bagheri(2017)]{aps:24}
+Hossein Fani and Ebrahim Bagheri.
+\newblock Community detection in social networks.
+\newblock \emph{Encyclopedia with Semantic Computing and Robotic Intelligence},
+  1\penalty0 (01):\penalty0 1630001, 2017.
+
+\bibitem[Fortunato and Hric(2016)]{aps:10}
+Santo Fortunato and Darko Hric.
+\newblock Community detection in networks: A user guide.
+\newblock \emph{Physics Reports}, 659:\penalty0 1--44, 2016.
+
+\bibitem[Frey and Dueck(2007)]{aps:48}
+Brendan~J Frey and Delbert Dueck.
+\newblock Clustering by passing messages between data points.
+\newblock \emph{science}, 315\penalty0 (5814):\penalty0 972--976, 2007.
+
+\bibitem[Girvan and Newman(2002)]{aps:8}
+Michelle Girvan and Mark~EJ Newman.
+\newblock Community structure in social and biological networks.
+\newblock \emph{Proceedings of the national academy of sciences}, 99\penalty0
+  (12):\penalty0 7821--7826, 2002.
+
+\bibitem[Grygorash et~al.(2006)Grygorash, Zhou, and Jorgensen]{aps:54}
+Oleksandr Grygorash, Yan Zhou, and Zach Jorgensen.
+\newblock Minimum spanning tree based clustering algorithms.
+\newblock In \emph{Tools with Artificial Intelligence, 2006. ICTAI'06. 18th
+  IEEE International Conference on}, pages 73--81. IEEE, 2006.
+
+\bibitem[Guha et~al.(1999)Guha, Rastogi, and Shim]{aps:43}
+Sudipto Guha, Rajeev Rastogi, and Kyuseok Shim.
+\newblock Rock: A robust clustering algorithm for categorical attributes.
+\newblock In \emph{Data Engineering, 1999. Proceedings., 15th International
+  Conference on}, pages 512--521. IEEE, 1999.
+
+\bibitem[Guha et~al.(2001)Guha, Rastogi, and Shim]{aps:44}
+Sudipto Guha, Rajeev Rastogi, and Kyuseok Shim.
+\newblock Cure: an efficient clustering algorithm for large databases.
+\newblock \emph{Information Systems}, 26\penalty0 (1):\penalty0 35--58, 2001.
+
+\bibitem[Hajian and White(2011)]{aps:19}
+Behnam Hajian and Tony White.
+\newblock Modelling influence in a social network: Metrics and evaluation.
+\newblock In \emph{Privacy, Security, Risk and Trust (PASSAT) and 2011 IEEE
+  Third Inernational Conference on Social Computing (SocialCom), 2011 IEEE
+  Third International Conference on}, pages 497--500. IEEE, 2011.
+
+\bibitem[Han et~al.(2011)Han, Pei, and Kamber]{aps:7}
+Jiawei Han, Jian Pei, and Micheline Kamber.
+\newblock \emph{Data mining: concepts and techniques}.
+\newblock Elsevier, 2011.
+
+\bibitem[Howlader and Sudeep(2016)]{aps:15}
+Prantik Howlader and KS~Sudeep.
+\newblock Degree centrality, eigenvector centrality and the relation between
+  them in twitter.
+\newblock In \emph{Recent Trends in Electronics, Information \& Communication
+  Technology (RTEICT), IEEE International Conference on}, pages 678--682. IEEE,
+  2016.
+
+\bibitem[Hu et~al.(2008)Hu, Chen, Zhang, Li, Di, and Fan]{aps:27}
+Yanqing Hu, Hongbin Chen, Peng Zhang, Menghui Li, Zengru Di, and Ying Fan.
+\newblock Comparative definition of community and corresponding identifying
+  algorithm.
+\newblock \emph{Physical Review E}, 78\penalty0 (2):\penalty0 026121, 2008.
+
+\bibitem[Jain(2010)]{aps:3}
+Anil~K Jain.
+\newblock Data clustering: 50 years beyond k-means.
+\newblock \emph{Pattern recognition letters}, 31\penalty0 (8):\penalty0
+  651--666, 2010.
+
+\bibitem[Kao et~al.(2016)Kao, Huang, and Sandnes]{aps:23}
+Li-Jen Kao, Yo-Ping Huang, and Frode~Eika Sandnes.
+\newblock Mining time-dependent influential users in facebook fans group.
+\newblock In \emph{Systems, Man, and Cybernetics (SMC), 2016 IEEE International
+  Conference on}, pages 000718--000723. IEEE, 2016.
+
+\bibitem[Kaufman and Rousseeuw(2009)]{aps:38}
+Leonard Kaufman and Peter~J Rousseeuw.
+\newblock \emph{Finding groups in data: an introduction to cluster analysis},
+  volume 344.
+\newblock John Wiley \& Sons, 2009.
+
+\bibitem[Khrabrov and Cybenko(2010)]{aps:18}
+Alexy Khrabrov and George Cybenko.
+\newblock Discovering influence in communication networks using dynamic graph
+  analysis.
+\newblock In \emph{Social Computing (SocialCom), 2010 IEEE Second International
+  Conference on}, pages 288--294. IEEE, 2010.
+
+\bibitem[Lancichinetti et~al.(2008)Lancichinetti, Fortunato, and
+  Radicchi]{aps:26}
+Andrea Lancichinetti, Santo Fortunato, and Filippo Radicchi.
+\newblock Benchmark graphs for testing community detection algorithms.
+\newblock \emph{Physical review E}, 78\penalty0 (4):\penalty0 046110, 2008.
+
+\bibitem[Largeron et~al.(2015)Largeron, Mougel, Rabbany, and
+  Za{\"\i}ane]{aps:55}
+Christine Largeron, Pierre-Nicolas Mougel, Reihaneh Rabbany, and Osmar~R
+  Za{\"\i}ane.
+\newblock Generating attributed networks with communities.
+\newblock \emph{PloS one}, 10\penalty0 (4):\penalty0 e0122777, 2015.
+
+\bibitem[Li et~al.(2017)Li, Sellis, Culpepper, He, Liu, and Wang]{aps:22}
+Jianxin Li, Timos Sellis, J~Shane Culpepper, Zhenying He, Chengfei Liu, and
+  Junhu Wang.
+\newblock Geo-social influence spanning maximization.
+\newblock \emph{IEEE Transactions on Knowledge and Data Engineering}, 2017.
+
+\bibitem[Liu et~al.(2009)Liu, Niculescu-Mizil, and Gryc]{aps:51}
+Yan Liu, Alexandru Niculescu-Mizil, and Wojciech Gryc.
+\newblock Topic-link lda: joint models of topic and author community.
+\newblock In \emph{proceedings of the 26th annual international conference on
+  machine learning}, pages 665--672. ACM, 2009.
+
+\bibitem[MacQueen et~al.(1967)]{aps:37}
+James MacQueen et~al.
+\newblock Some methods for classification and analysis of multivariate
+  observations.
+\newblock In \emph{Proceedings of the fifth Berkeley symposium on mathematical
+  statistics and probability}, volume~1, pages 281--297. Oakland, CA, USA.,
+  1967.
+
+\bibitem[Newman(2004)]{aps:31}
+Mark~EJ Newman.
+\newblock Fast algorithm for detecting community structure in networks.
+\newblock \emph{Physical review E}, 69\penalty0 (6):\penalty0 066133, 2004.
+
+\bibitem[Newman(2006)]{aps:36}
+Mark~EJ Newman.
+\newblock Finding community structure in networks using the eigenvectors of
+  matrices.
+\newblock \emph{Physical review E}, 74\penalty0 (3):\penalty0 036104, 2006.
+
+\bibitem[Newman and Girvan(2004)]{aps:32}
+Mark~EJ Newman and Michelle Girvan.
+\newblock Finding and evaluating community structure in networks.
+\newblock \emph{Physical review E}, 69\penalty0 (2):\penalty0 026113, 2004.
+
+\bibitem[Ng and Han(2002)]{aps:39}
+Raymond~T. Ng and Jiawei Han.
+\newblock Clarans: A method for clustering objects for spatial data mining.
+\newblock \emph{IEEE transactions on knowledge and data engineering},
+  14\penalty0 (5):\penalty0 1003--1016, 2002.
+
+\bibitem[Pons and Latapy(2006)]{aps:29}
+Pascal Pons and Matthieu Latapy.
+\newblock Computing communities in large networks using random walks.
+\newblock \emph{J. Graph Algorithms Appl.}, 10\penalty0 (2):\penalty0 191--218,
+  2006.
+
+\bibitem[Qian et~al.(2014)Qian, Feng, Zhao, and Mei]{aps:17}
+Xueming Qian, He~Feng, Guoshuai Zhao, and Tao Mei.
+\newblock Personalized recommendation combining user interest and social
+  circle.
+\newblock \emph{IEEE transactions on knowledge and data engineering},
+  26\penalty0 (7):\penalty0 1763--1777, 2014.
+
+\bibitem[Raghavan et~al.(2007)Raghavan, Albert, and Kumara]{aps:33}
+Usha~Nandini Raghavan, R{\'e}ka Albert, and Soundar Kumara.
+\newblock Near linear time algorithm to detect community structures in
+  large-scale networks.
+\newblock \emph{Physical review E}, 76\penalty0 (3):\penalty0 036106, 2007.
+
+\bibitem[Rao et~al.(2015)Rao, Spasojevic, Li, and DSouza]{aps:14}
+Adithya Rao, Nemanja Spasojevic, Zhisheng Li, and Trevor DSouza.
+\newblock Klout score: Measuring influence across multiple social networks.
+\newblock In \emph{Big Data (Big Data), 2015 IEEE International Conference on},
+  pages 2282--2289. IEEE, 2015.
+
+\bibitem[Reichardt and Bornholdt(2006)]{aps:35}
+J{\"o}rg Reichardt and Stefan Bornholdt.
+\newblock Statistical mechanics of community detection.
+\newblock \emph{Physical Review E}, 74\penalty0 (1):\penalty0 016110, 2006.
+
+\bibitem[Riquelme and Gonz{\'a}lez-Cantergiani(2016)]{aps:20}
+Fabi{\'a}n Riquelme and Pablo Gonz{\'a}lez-Cantergiani.
+\newblock Measuring user influence on twitter: A survey.
+\newblock \emph{Information processing \& management}, 52\penalty0
+  (5):\penalty0 949--975, 2016.
+
+\bibitem[Rosvall and Bergstrom(2008)]{aps:28}
+Martin Rosvall and Carl~T Bergstrom.
+\newblock Maps of random walks on complex networks reveal community structure.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 105\penalty0
+  (4):\penalty0 1118--1123, 2008.
+
+\bibitem[Sheikholeslami et~al.(1998)Sheikholeslami, Chatterjee, and
+  Zhang]{aps:46}
+Gholamhosein Sheikholeslami, Surojit Chatterjee, and Aidong Zhang.
+\newblock Wavecluster: A multi-resolution clustering approach for very large
+  spatial databases.
+\newblock In \emph{VLDB}, volume~98, pages 428--439, 1998.
+
+\bibitem[Subbian et~al.(2014)Subbian, Sharma, Wen, and Srivastava]{aps:13}
+Karthik Subbian, Dhruv Sharma, Zhen Wen, and Jaideep Srivastava.
+\newblock Finding influencers in networks using social capital.
+\newblock \emph{Social Network Analysis and Mining}, 4\penalty0 (1):\penalty0
+  219, 2014.
+
+\bibitem[Tukey(1977)]{aps:4}
+John~W Tukey.
+\newblock Exploratory data analysis.
+\newblock 1977.
+
+\bibitem[Von~Luxburg(2007)]{aps:50}
+Ulrike Von~Luxburg.
+\newblock A tutorial on spectral clustering.
+\newblock \emph{Statistics and computing}, 17\penalty0 (4):\penalty0 395--416,
+  2007.
+
+\bibitem[Weng et~al.(2010)Weng, Lim, Jiang, and He]{aps:16}
+Jianshu Weng, Ee-Peng Lim, Jing Jiang, and Qi~He.
+\newblock Twitterrank: finding topic-sensitive influential twitterers.
+\newblock In \emph{Proceedings of the third ACM international conference on Web
+  search and data mining}, pages 261--270. ACM, 2010.
+
+\bibitem[Xu et~al.(2003)Xu, Liu, and Gong]{aps:56}
+Wei Xu, Xin Liu, and Yihong Gong.
+\newblock Document clustering based on non-negative matrix factorization.
+\newblock In \emph{Proceedings of the 26th annual international ACM SIGIR
+  conference on Research and development in informaion retrieval}, pages
+  267--273. ACM, 2003.
+
+\bibitem[Yang and Leskovec(2012)]{aps:49}
+Jaewon Yang and Jure Leskovec.
+\newblock Community-affiliation graph model for overlapping network community
+  detection.
+\newblock In \emph{Data Mining (ICDM), 2012 IEEE 12th International Conference
+  on}, pages 1170--1175. IEEE, 2012.
+
+\bibitem[Yang and Leskovec(2013)]{aps:53}
+Jaewon Yang and Jure Leskovec.
+\newblock Overlapping community detection at scale: a nonnegative matrix
+  factorization approach.
+\newblock In \emph{Proceedings of the sixth ACM international conference on Web
+  search and data mining}, pages 587--596. ACM, 2013.
+
+\bibitem[Yang et~al.(2012)Yang, Steck, and Liu]{aps:11}
+Xiwang Yang, Harald Steck, and Yong Liu.
+\newblock Circle-based recommendation in online social networks.
+\newblock In \emph{Proceedings of the 18th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 1267--1275. ACM, 2012.
+
+\bibitem[Zhang et~al.(1996)Zhang, Ramakrishnan, and Livny]{aps:42}
+Tian Zhang, Raghu Ramakrishnan, and Miron Livny.
+\newblock Birch: an efficient data clustering method for very large databases.
+\newblock In \emph{ACM Sigmod Record}, volume~25, pages 103--114. ACM, 1996.
+
+\bibitem[Zhu et~al.(2011)Zhu, Ma, Chen, and Bu]{aps:9}
+Jianke Zhu, Hao Ma, Chun Chen, and Jiajun Bu.
+\newblock Social recommendation using low-rank semidefinite program.
+\newblock In \emph{AAAI}, pages 158--163, 2011.
+
+\end{thebibliography}

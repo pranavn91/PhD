@@ -1,0 +1,544 @@
+
+\chapter{Empirical Analysis of Data Clustering Algorithms}
+
+\section{Introduction}
+% no \IEEEPARstart
+As the Digital transformation of the society gathers pace, there is an increase in proliferation of technologies that simplify the process of recording data efficiently. Low cost sensors, RFIDs , Internet enabled Point of Sales terminals are an example of such data capturing devices that have invaded our lives. The easy availability of such devices and the resultant simplification of operations due to them has generated repositories of data that previously didn't exist. Today, there exist many areas where voluminous amount of data gets generated every second and is processed and stored. Some of the common fields are social networks, sensor networks, cloud storages etc. The availability of data as well as the reduction in cost of computation power have jointly boosted the fields of machine learning, pattern recognition, statistical data analysis and in general data science.  \\
+
+Even though such a volume provides huge opportunities to academia and industry it also represents problems for efficient analysis and retrieval \cite{aps:1} \cite{aps:3}. To mitigate the exponential time and space needed for such operations data is compacted into meaningful summaries i.e. Exploratory Data Analysis [E.D.A.] which shall eliminate the need for storing data. In unsupervised learning literature such summaries are equivalent to "clusters". E.D.A. helps in visualization and promotes better understanding of the data. It utilizes methods that are at the intersection of machine learning, pattern recognition and information retrieval. Cluster analysis is the main task performed in it.  \\
+
+A Cluster in a data is defined objectively using dissimilarity measures such as edit distance, density in a euclidean or non euclidean data space, distance calculated using Minkowski measures, proximity measures or probability distributions. All measures concur that a threshold value should be set for grouping of objects in a cluster and objects which exceed such a threshold are dissimilar and should be separated from the cluster. Clustering gives a better representation of the data since all objects within a cluster have less variability in their attributes and they can be summarised efficiently. Clustering has found applications in other fields like estimating the missing values in data or identifying outliers in data \cite{aps:7}. 
+\\
+
+
+Clustering is thus a meta learning approach for getting insights into data and in diverse domains such as Market Research, E-Commerce, Social Network Analysis and Aggregation of Search Results amongst others. Multiple algorithms exist for organizing data into clusters however there is no universal solution to all problems. No consensus exists on the "best" algorithm as each is designed with certain assumptions and has its own biases. These algorithms can be grouped into methodologies such as Partitioning based, hierarchical, density based, grid based, message passing based, neural network based, probabilistic and generative model based. However in terms of complexity it is a NP-hard grouping problem and so existing algorithms rely on approximation techniques or heuristics to reduce the search space in order to find the optimal solution. There is no universally agreed objective criteria for correctness or clustering validity and each of these algorithms has its own drawbacks and successes in solving the challenging problem of unsupervised clustering \cite{aps:5} \cite{aps:4} . \\
+
+Motivated by these reasons, in this paper a review of the state of the art clustering algorithms is made to highlight their main strengths and weaknesses. Section II covers the theoretical aspects of these algorithms, Section III contains the Experiments performed using these algorithms and Section IV has the conclusion on the results. 
+
+
+\section{Types of Clustering Algorithms}
+
+Various clustering algorithms are found in literature \cite{aps:2} \cite{aps:7} \cite{aps:3} \cite{aps:4} and are broadly categorized into categories on the basis of an algorithm designer's perspective with emphasis on the underlying clustering criteria:
+
+\subsection{Partition based clustering algorithms}
+ 
+The general principle in these algorithms is that a cluster should contain atleast one object and that each object must belong to exactly one group i.e. hard clustering. The Number of clusters $k$ is pre-specified by the user making this a semi supervised algorithm although many strategies have been suggested to estimate the ideal number of clusters like the empirical method where $k=\sqrt{n}$ where $ n$ = $\mid N \mid$ points and Elbow method where the $k$ is fixed as the turning point on the graph of $k$ v/s Avg. distance to centroid. The objective function to be minimised in these k-partitioning algorithms is $SSE$ i.e. Sum of Squared Distance \cite{aps:37}.
+
+\begin{equation}
+SSE = \sum_{k=1}^{k} \sum_{x_i \epsilon c_k} \left \| x_i - c_k \right \| ^2
+\end{equation}
+
+where $c_k$ = centroid of the cluster,\\
+
+Popular k-partitioning algorithms are K-Means which represents a centroid as the arithmetic mean of the objects in the cluster \cite{aps:38}. The algorithm was the most popular in this category even though it had drawbacks as it could not find non convex shaped clusters or handle non numerical attributes in higher dimensions. The time complexity was O($kN$) making it suitable for large datasets, however the algorithm could theoretically take infinite iterations to converge and its mean based appraoch was sensitive to noisy data or data with outliers. Algorithms depending on Euclidean Distance measures suffer from the 'Curse of Dimensionality' due to distances being inflated in higher dimensions. K-Means++ by D. Arthur \textit{et. al} 2007 \cite{aps:39} provides an improvement over K-Means by initializing the seed cluster centroids at maximum distance from each other. This technique has provided better results compared to random initializations with multiple repeats. Mini Batch K-Means by D. Sculley \textit{et. al} \cite{aps:40} uses randomly sampled subsets of original data in each iteration of clustering. The approach improves computing time at the cost of slight reduction in accuracy compared to the Original K-Means algorithm.\\
+
+To overcome the susceptibility to noise in mean based approaches, K-Mediods algorithm represented clusters by objects located near the centroids. Partitioning Around Mediods (PAM) \cite{aps:38} is the most popular approach for mediods based partitioning however it has a computational time complexity of O($k(n-k)^2$) and hence wouldn't scale well to large datasets. Modified version of PAM such as CLARA (PAM with sampling) \cite{aps:39} and CLARANS \cite{aps:40} were proposed. CLARA has a computation time complexity of O($ks^2 + k(n-k)$) and CLARANS has O($n^2$) and so both methods wouldn't be applicable to large sets of data. \\
+
+Kernel K-Means involves converting the points from euclidean space to high dimension kernel space. The kernel choices can be based on Mercer's criteria. R.B.F. or Gaussian is the common choice considered. The advantage of Kernel K-Means over K-Means is in finding non convex clusters albeit at the cost of computational time. BFR algorithm \cite{aps:41} is implemented for detecting clusters in large datasets in a single pass over the data. The algorithm makes a strong assumption that clusters have objects that are normally distributed and due to this it can't find clusters at tilted angles to the axes or clusters of random shapes.      
+ 
+\subsection{Hierarchical Clustering algorithms}
+
+This category of algorithms have a completely unsupervised approach as they do not require the users to specify the number of clusters in advance. The algorithms in this category are of two types: Agglomerative Clustering (AGNES) and Divisive Clustering (DIANA). In Agglomerative, every object is treated as a cluster in the first pass and proximity based measures are used to determine which clusters can be merged in subsequent iterations. In divisive methods, a top down approach is followed in which all datapoints are merged in a single cluster initially and in subsequent iterations the supercluster is split into subclusters till a stopping criteria is reached. Computation time is the key drawback in such algorithms O($n^3$) / O($n^2 log n$) for priority queue implementations and so it is not applicable for large datasets which don't fit in main memory. Distance measures used are Cohesion ($d$ = diameter of a cluster i.e. maximum distance between points in a cluster), Radius ($r$ = maximum distance of a point from a cluster) or Density ($\frac{n}{d}$ ). \\
+
+It is difficult to decide a distance measure for the data and hence the optimization objective isn't clear. Hierarchical clustering in general can't handle missing values except for probabilistic hierarchical methods and are sensitive to noise/outliers. The clusters once formed in an iteration cannot be undone in subsequent iterations. The result of clustering is a tree based data structure called dendrogram. In it the leaf nodes are the edges and clustering is indicated by joining leaf nodes by edges. To measure the dissimilarity between clusters several linkage methods are developed, the popular techniques are listed below. \\
+
+\begin{itemize}
+\item Maximum linkage clustering: max { d (a,b) : $a \in A, b \in B$}
+\item Minimum linkage clustering: min { d (a,b) : $a \in A, b \in B$}
+\item Average linkage clustering: $\frac{1}{|A||B|} \sum_{a \in A} \sum_{b \in B} d(a,b)$ 
+\item Centroid linkage clustering: $||C_i - C_j||$ centroid $C_i \in A$ and centroid $C_j \in B$.
+\item Ward's minimum variance method to minimize the within cluster variance. \\
+\end{itemize}
+
+Popular Algorithms of hierarchical clustering covered in the literature are BIRCH \cite{aps:42}, CURE \cite{aps:43}, ROCK \cite{aps:43}, CHAMELEON \cite{aps:44}. BIRCH is a scalable, hierarchical clustering approach for large datasets. It builds a Clustering Feature tree which is a height balanced tree. Similar to a B+ Tree it has leaf nodes that represent clusters by a tuple: {N,LS,SS} where $N$ is the number of points in the cluster, $LS$ is the linear sum of $N$ points and $SS$ is the squared sum of $N$ points. This creates compaction as individual data points are stored as summarised information. The non leaf nodes have atmost $B$ entries and leaf nodes have atmost $L$ subclusters that satisfy a threshold value for maximum radius. As new datapoints are assigned to nearest subclusters, the leaf nodes are split to remain under the threshold radius. A single pass is sufficient to cluster the data, however BIRCH is suitable only for numerical data and since each node in the CF Tree is limited by the size, the clusters formed may not be same as natural clusters. The algorithm doesn't perform well against non convex clusters as it uses radius to control the boundary of clusters.\\
+
+CURE addresses the drawback of non-spherical shaped clusters. A constant number of $c$ well scattered points are chosen to represent the cluster. These points are shrunk towards the mean of the cluster by a fraction $\alpha$. Clusters with closest pair of representative points are merged at each iteration. ROCK is for large datasets with categorical attributes. It has a bottom up approach to clustering as initially each data point is a separate cluster. Then pairwise similarity is calculated by Eqn. 2 and a goodness function in Eqn. 3 is used to combine clusters. Calculation of pairwise similarity and merging clusters which are highly similar is done iteratively till a stopping criteria is reached. 
+
+\begin{equation}
+E_l = \sum_{i=1}^{k}n_i * \sum_{p_q,p_r \in C_k} \frac{link(p_q,p_r)}{n_i^{1+2f(\theta)}} 
+\end{equation}
+
+\begin{equation}
+G(C_i,C_j) = \frac{link(C_i,C_j)}{(n_i+n_j)^{1+2f(\theta)} - (n_i)^{1+2f(\theta)} - (n_j)^{1+2f(\theta)}}  
+\end{equation}  
+
+CHAMELEON constructs a sparse graph from the dataset using K-nearest neighbour. It obtains clusters by partitioning the graph by minimising the edge cut. Individual clusters are merged based on relative inter-connectivity and relative closeness both overcoming disadvantage of BIRCH, CURE, ROCK as they merge based on a single criteria. However it has a high time complexity of O($nm + n log n + m^2log m$).
+
+
+\subsection{Fuzzy clustering}
+
+Fuzzy clustering algorithms assign a set of membership coefficients to each element which correspond to a "belongingness" or degree of membership to a cluster i.e. soft clustering. Fuzzy C-Means algorithm by Dunn in 1973 \cite{aps:45} and modified by Bezdek in 1981 \cite{aps:45} minimises the objective function in Eqn. 4 for this purpose, Eqn. 5 defines the degree of belongingness $u_{ij}^m$ and Eqn. 6 defines the centroid $C_j$ of a cluster.  
+
+\begin{equation}
+\sum_{j=1}^{k}\sum_{x_i \in C_j} u_{ij}^m (x_i - u_j)^2 
+\end{equation}
+
+Where,
+\begin{itemize}
+\item $u_{ij}$ is the degree to which an observation $x_i$ belongs to a cluster $C_j$
+\item $μ_j$ is the center of the $C_j$
+\item $m$ is the real number (1 $\leq m \leq \infty$) that defines the level of cluster fuzziness.
+
+\end{itemize}
+
+\begin{equation}
+u_{ij}^m = \frac{1}{\sum_{l=1}^{k} (\frac{|x_i - c_j|}{|x_i - c_k|})^\frac{2}{m-1}}   
+\end{equation}
+\begin{equation}
+C_j = \frac{ \sum_{x \in C_j} u_{ij}^m x}{\sum_{x \in C_j} u_{ij}^m}
+\end{equation}
+‏
+The algorithm minimises intra cluster variance but can converge to a  local optimal solution. It depends on initialisation of the seeds and different initializations may lead to different results. The number of clusters $k$ have to be specified in advanced which is another drawback.
+
+\subsection{Model Based Clustering Algorithms}
+
+The traditional clustering algorithms hierarchical and partition based clustering rely on heuristics whereas Model based algorithms assume that the data has been generated from a mixture of multiple probability distributions (Gaussian or multinomial) whose parameters mean, covariance matrix are to be estimated using the Expectation Maximization algorithm. The Bayesian information criteria or the Akaike information criteria can be used for selection of optimal number of clusters. The key drawback of this algorithms is that similar to k-means it also can converge to local optimal solution depending on the initial assignment of the $k$ seeds. The objective function is not convex for these methods. Also, the optimization criteria can theoretically take infinite iterations to converge and a suitable threshold value has to be decided in advance. If the probabilities of the objects don't alter above this threshold then the algorithm can be stopped. Eqn. 6 is the prior probability that denotes the percentage of instances that came from source $c$. Eqn. 7 gives the mean i.e. expected value of attribute $j$ from source $c$. Eqn. 8 gives the covariance matrix denoting the covariance of attributes $j,k$ in source $c$.
+
+\begin{equation}
+P(c)= \frac{1}{n} \sum_{i=1}^{n} P(c\vert\vec{x_i})
+\end{equation}
+\begin{equation}
+\mu_{c,j} = \sum_{i=1}^{n} \Bigl(\frac{P(c\vert\vec{x_i})}{nP(c)}\Bigr)x_{i,j}
+\end{equation}
+\begin{equation}
+\sum_{c}{\mathstrut}_{j,k} = \sum_{i=1}^{n}\Bigl(\frac{P(c\vert\vec{x_i})}{nP(c)}\Bigr)(x_{i,j} - \mu_{c,j})(x_{i,k} - \mu_{c,k})
+\end{equation}
+\begin{equation}
+ P(c\vert\vec{x_i}) = \frac{P(\vec{x_i}\vert c)P(c))}{\sum_{i=1}^{k}P(\vec{x_i}\vert c)P(c)}
+ \end{equation}
+ \begin{equation}
+P(\vec{x_i}|c) = \frac{1}{\sqrt{2\pi\sum_{c}}} \exp\Bigl(- \frac{1}{2}(\vec{x_i} - \vec{\mu_c})^T \sum_{c}^{-1}(\vec{x_i} - \vec{\mu_c})\Bigr)
+\end{equation}
+
+\subsection{Grid Based Clustering Algorithm}  
+
+The key principle of grid based algorithms is to discretize the dataspace into grids and estimate the density by counting the number of points in a grid cell. CLIQUE \cite{aps:3} \cite{aps:46} was developed by Agrawal \textit{et. al} to cluster high dimensional data in subspace. The algorithm identifies dense regions in a grid partition of the dataspace followed by selecting subspaces that contain clusters using Apriori principle. The dense connected units in all subspaces of interest are chosen and minimal cover for each cluster is created. However in all grid based clustering approaches the quality of clustering depends on the number and width of the grid cells. STING by Wang \textit{et. al} \cite{aps:46} divided the spatial area into rectangular cells at different levels of resolution forming a tree structure. A cell contain statistical parameters like mean, variance, standard deviations. This information is created by going through the data once and take O($n$) time to generate clusters. The algorithm doesn't consider the spatial relationship between neighbouring cells before a parent cell is constructed and so all cluster boundaries are horizontal or vertical but no diagonally shaped boundary is detected \cite{aps:46}.
+
+
+\subsection{Density based clustering algorithms}
+
+Cluster is defined as a connected dense component that can grow in any direction till the density continues to be above a threshold. This leads to automatic avoidance of outliers and detection of well separated clusters of arbitrary shapes. Popular methods based on this approach are DBSCAN by Kriegel \textit{et. al} \cite{aps:46}, OPTICS \cite{aps:46}. DBSCAN can find non linearly separable clusters and doesn't need the initial value of clusters to proceed. It uses euclidean distance measures to calculate distance between points in space and so is sensitive to curse of dimensionality. The parameters needed by DBSCAN are $\epsilon$ which defines the radius of neighbourhood around a point and minimum neighbours $MinPts$ of a point in its $\epsilon$ - neighbourhood. \\
+
+In DBSCAN, pairwise distance is calculated between $x_i$ and other points. For each point in the $\epsilon$ - neighbourhood of $x_i$ if the $N_pts \leq MinPts$ then mark it as $core$ point. Then for each $core$ point create a new cluster or assign it to a cluster if it is not assigned already. Find recursively all its density connected points and assign them to the same cluster as the core point. Iterate through the remaining unvisited points in the dataset. At the end of all iterations, the unassigned points are outliers. \\
+
+OPTICS is an extension of DBSCAN to address the drawback of detecting clusters in varying densities. It accepts the parameters of DBSCAN $\epsilon$ and $MinPts$ in neighbourhood $N_{\epsilon}(P)$. It additionally defines a new measure for every point known as $Core-Distance_{\epsilon, Minpts}(P) = C$ as in Eqn. 12 and $Reachability-Distance_{\epsilon, Minpts}(o,p) = R$ as in Eqn 13.\\
+
+\begin{align}
+C = \begin{cases}UNDEFINED; & if | N_{\epsilon(p)} | < MinPts\\smallest distance to N_{\epsilon}(p); & otherwise\end{cases}
+\end{align}
+\begin{align}
+R = \begin{cases}UNDEFINED; & if |N_{\epsilon(p)}| < MinPts\\max(C, dist(o,p)); & otherwise\end{cases}
+\end{align}
+
+OPTICS produces a cluster ordering with respect to its density based clustering structure. 
+
+\subsection{Affinity Propagation Clustering}
+
+This technique is based on concept of message passing between data points \cite{aps:47}. It doesn't require the user to specify the number of clusters in advance. The initial input is a similarity matrix $s$ where $s(i,k)$ denotes suitability of point $k$ to be exemplar or representative of point $i$. and $s(k,k)$ is higher for points more preferred as exemplars. the value can be set to median to produce moderate number of clusters whereas too high can get many clusters and too low shall give less clusters.\\
+
+Two kinds of messages are exchanged between the points "responsibility" $r(i,k)$ reflects suitability of point $k$ as an exemplar of $i$. The availability $a(i,k)$ denotes how appropriate it would be for $i$ to choose $k$ as its exemplar. Initially availability matrix is set to zero and the responsibilities for each point is calculate by the rule:
+
+\begin{align}
+r(i,k) \leftarrow s(i,k) - \max {a(i,k')+s(i,k')} : \forall k', k' \neq k
+\end{align}
+
+Then availability is updated by the rules:\\
+
+\begin{align}
+a(i,k)  \leftarrow \min \left( 0 , r(k,k) + \sum_{i'\notin {i,k}}  max(0,r(i'.k)) \right) for (i \neq k)\\
+a(k,k) \leftarrow \sum_{i' \neq k} \max \left( 0, r(i',k)  \right)
+\end{align}
+
+The value of $k$ such that $a(i,k)+r(i,k)$ is maximum is selected as an exemplar for point $i$. The iterative updates for availability and responsibility matrices can be terminated after a limited iterations or after changes in the messages fall below a threshold. The time complexity is of the order O($N^2 T$), $N = samples$ and $T = iterations$ \cite{aps:48}.   
+
+\subsection{Affiliation Graph Model} 
+
+Community Affiliation graph model is a probabilistic generative model for the network \cite{aps:49} \cite{aps:53}. The assumption is that the network is generated by a model whose parameters have to be estimated. The model for a network with $V$ vertices, $C$ communities, $M$ memberships, $p_c$ probability associated with a community $c$ is represented by tuple $B(V,C,M,{p_c})$. Then the edge probability for each pair of node is computed by Eqn. 18
+
+\begin{equation}
+P(u,v) = 1 - \prod_{c \in M_u \cap M_v} (1 - p_c)
+\end{equation} 
+\begin{equation}
+P(u,v) = 1 - exp(-F_u.F_v^T)
+\end{equation} 
+If $M_u \cap M_v = 0$ then P(u,v) = $\varepsilon$. $F_u$ is the vector that denotes the strengths of association of a node $u$ with each community in the network. The task is to find the matrix of memberships $F$ that maximises the likelihood of generating the graph. The log-likehood of this is Eqn. 19. The Gradient update algorithm is used to find the value of F as shown in Eqn. 20. 
+
+\begin{equation}
+l(F) = \sum_{u,v \in E} log(1 - \exp(-F_u.F_v^T)) - \sum_{u,v \notin E}(F_u.F_v^T)
+\end{equation}
+\begin{equation}
+\bigtriangledown l(F_u) = \sum_{v \in N(u)} F_v \frac{\exp(-F_u.F_v^T)}{1 - \exp(-F_u.F_v^T)} - \sum_{v \notin N(u)} F_v
+\end{equation}
+
+
+\subsection{Spectral Clustering}
+
+Spectral clustering outperforms k-means or single linkage and also has several advantages such as simple implementation. Spectral clustering can be solved by linear algebra methods \cite{aps:50}. The main tools for spectral clustering are graph laplacian matrices $L$. The fundamental concept is to partition a given similarity graph such that edges between different groups have low weights and edges within a group have high weights. \\
+\begin{align}
+L = D - A\\
+L_{sym} = D^-1/2*L*D^-1/2\\
+L_{rw} = D^-1*L
+\end{align} 
+Where,
+\begin{itemize}
+\item D = Degree matrix
+\item A = Adjacency matrix\\
+\end{itemize}
+Spectral clustering popular examples are Unnormalised spectral clustering which uses $L$ and Normalised spectral clustering with $L_{sym}$ and $L_{rw}$. In both methods, the first $k$ eigenvectors $u_1,u_2,...,u_k$ corresponding to the $k$ smallest eigenvalues are computed to get matrix $U \in R^{n*k}$ which has $u_1,u_2,...,u_k$ as columns. Then for $y_i \in R^k$ which is the $i^{th}$ row of $U$, all rows are treated as points and clustered by k-means to get $k$ clusters. The normalised spectral clustering algorithms attempt to minimise inter cluster similarity and maximise intra cluster similarity whereas unnormalised spectral clustering attempts to minimise inter cluster similarity only. For computational simplicity $L_{rw}$ is used in clustering.   
+
+
+
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+% Note that IEEEtran v1.7 and later has special internal code that
+% is designed to preserve the operation of \label within \caption
+% even when the captionsoff option is in effect. However, because
+% of issues like this, it may be the safest practice to put all your
+% \label just after \caption rather than within \caption{}.
+%
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
+% option should be used if it is desired that the figures are to be
+% displayed while in draft mode.
+%
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=2.5in]{myfigure}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+% via \DeclareGraphicsExtensions.
+%\caption{Simulation results for the network.}
+%\label{fig_sim}
+%\end{figure}
+
+% Note that the IEEE typically puts floats only at the top, even when this
+% results in a large percentage of a column being occupied by floats.
+
+
+% An example of a double column floating figure using two subfigures.
+% (The subfig.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfloat command,
+% and the \label for the overall figure must come after \caption.
+% \hfil is used as a separator to get equal spacing.
+% Watch out that the combined width of all the subfigures on a 
+% line do not exceed the text width or a line break will occur.
+%
+%\begin{figure*}[!t]
+%\centering
+%\subfloat[Case I]{\includegraphics[width=2.5in]{box}%
+%\label{fig_first_case}}
+%\hfil
+%\subfloat[Case II]{\includegraphics[width=2.5in]{box}%
+%\label{fig_second_case}}
+%\caption{Simulation results for the network.}
+%\label{fig_sim}
+%\end{figure*}
+%
+% Note that often IEEE papers with subfigures do not employ subfigure
+% captions (using the optional argument to \subfloat[]), but instead will
+% reference/describe all of them (a), (b), etc., within the main caption.
+% Be aware that for subfig.sty to generate the (a), (b), etc., subfigure
+% labels, the optional argument to \subfloat must be present. If a
+% subcaption is not desired, just leave its contents blank,
+% e.g., \subfloat[].
+
+
+% An example of a floating table. Note that, for IEEE style tables, the
+% \caption command should come BEFORE the table and, given that table
+% captions serve much like titles, are usually capitalized except for words
+% such as a, an, and, as, at, but, by, for, in, nor, of, on, or, the, to
+% and up, which are usually not capitalized unless they are the first or
+% last word of the caption. Table text will default to \footnotesize as
+% the IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+%\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+% \extrarowheight as needed to properly center the text within the cells
+%\caption{An Example of a Table}
+%\label{table_example}
+%\centering
+%% Some packages, such as MDW tools, offer better commands for making tables
+%% than the plain LaTeX2e tabular which is used here.
+%\begin{tabular}{|c||c|}
+%\hline
+%One & Two\\
+%\hline
+%Three & Four\\
+%\hline
+%\end{tabular}
+%\end{table}
+
+
+% Note that the IEEE does not put floats in the very first column
+% - or typically anywhere on the first page for that matter. Also,
+% in-text middle ("here") positioning is typically not used, but it
+% is allowed and encouraged for Computer Society conferences (but
+% not Computer Society journals). Most IEEE journals/conferences use
+% top floats exclusively. 
+% Note that, LaTeX2e, unlike IEEE journals/conferences, places
+% footnotes above bottom floats. This can be corrected via the
+% \fnbelowfloat command of the stfloats package.
+
+\section{Experiments}
+
+Section II has examined custering algorithms from a theoretical point of view and in this section their performance on a clustering benchmark dataset is provided for an empirical evaluation.
+
+\subsection{Dataset}
+
+The Datasets selected are CURE-T2-4K and CLUTO-T8-8K which are publicly available artificially generated benchmarks by ClueMiner. The clusters can be identified by visualization but performance of clustering algorithms produces different results.
+
+
+
+
+\begin{figure}[htbp]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{CURE-T2-4K\label{fig:1a}}{\includegraphics[width=0.5\textwidth]{cure.png}}\hfill
+\subcaptionbox{CLUTO-T8-8K\label{fig:1b}}{\includegraphics[width=0.5\textwidth]{cluto.png}}
+\caption{Artificial Benchmark Datasets for Clustering} \label{fig:1}
+\end{figure}
+
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.3}
+\caption{description of Dataset}
+\label{table}
+\centering
+\begin{tabular}{|c|c|c|c|}
+  \hline
+\multicolumn{1}{|c|}{\textbf{Name}} & \multicolumn{1}{c|}{\textbf{ Instances}} & \multicolumn{1}{c|}{\textbf{ Attributes}} & \multicolumn{1}{c|}{\textbf{ Classes}}  \\
+  \hline
+  CURE-T2-4K & 4200 & 3 & 7\\
+   \hline
+   CLUTO-T8-8K & 8000 & 3 & 9\\
+    \hline
+\end{tabular}
+\end{table}
+
+\subsection{Experimental Results}
+
+
+\subsubsection{Partition based clustering Algorithm}
+
+Results of K-Means in Fig 2, K-Means++ in Fig 3 and Kernel K-Means with RBF kernel in Fig 4 applied on the datasets shows the detection of clusters symmetric along the axes is better than irregular shaped clusters.
+
+\begin{figure}[H]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{CURE-T2-4K\label{fig:1a}}{\includegraphics[width=0.5\textwidth]{cure-km.png}}\hfill
+\subcaptionbox{CLUTO-T8-8K\label{fig:1b}}{\includegraphics[width=0.5\textwidth]{cluto-km.png}}
+\caption{Clustering based on K-Means} \label{fig:1}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{CURE-T2-4K\label{fig:1a}}{\includegraphics[width=0.5\textwidth]{cure-kpp.png}}\hfill
+\subcaptionbox{CLUTO-T8-8K\label{fig:1b}}{\includegraphics[width=0.5\textwidth]{cluto-kpp.png}}
+\caption{Clustering based on K-Means++} \label{fig:1}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{CURE-T2-4K\label{fig:1a}}{\includegraphics[width=0.5\textwidth]{cure-kkmeans.png}}\hfill
+\subcaptionbox{CLUTO-T8-8K\label{fig:1b}}{\includegraphics[width=0.5\textwidth]{cluto-kkm.png}}
+\caption{Clustering based on Kernel K-Means} \label{fig:1}
+\end{figure}
+
+
+
+\subsubsection{Hierarchical clustering Algorithms}
+
+Hierarchical clustering algorithms based on different cluster agglomeration methods were applied on the datasets. The methods were not able to separate the noise from the dataset. Another drawback of these techniques was inability to handle noise / outliers. The results show the merging of noisy data with the clusters. The single linkage method has resulted in a super cluster for both datasets as shown in Fig 5. In Fig 6. Average linkage method could not identify clusters of irregular shape. Agglomeration based on complete linkage has resulted in compact clusters as seen in Fig 7. Agglomeration based on centroid has been susceptible to noise as seen in Fig 8. as points not belonging to any cluster were included in clusters. Agglomeration based on Ward's minimum variance criteria too included noise points in the clusters and failed to identify irregular shaped clusters.      
+
+\begin{figure}[H]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{CURE-T2-4K\label{fig:1a}}{\includegraphics[width=0.5\textwidth]{hclust-cure-sin.png}}\hfill
+\subcaptionbox{CLUTO-T8-8K\label{fig:1b}}{\includegraphics[width=0.5\textwidth]{hclust-cluto-sin.png}}
+\caption{Hierarchical Clustering based on Single linkage} \label{fig:1}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{CURE-T2-4K\label{fig:1a}}{\includegraphics[width=0.5\textwidth]{hclust-cure-avg.png}}\hfill
+\subcaptionbox{CLUTO-T8-8K\label{fig:1b}}{\includegraphics[width=0.5\textwidth]{hclust-cluto-avg.png}}
+\caption{Hierarchical Clustering based on Average linkage} \label{fig:1}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{CURE-T2-4K\label{fig:1a}}{\includegraphics[width=0.5\textwidth]{hclust-cure-com.png}}\hfill
+\subcaptionbox{CLUTO-T8-8K\label{fig:1b}}{\includegraphics[width=0.5\textwidth]{hclust-cluto-comp.png}}
+\caption{Hierarchical Clustering based on Complete linkage} \label{fig:1}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{CURE-T2-4K\label{fig:1a}}{\includegraphics[width=0.5\textwidth]{hclust-cure-cen.png}}\hfill
+\subcaptionbox{CLUTO-T8-8K\label{fig:1b}}{\includegraphics[width=0.5\textwidth]{hclust-cluto-cent.png}}
+\caption{Hierarchical Clustering based on Centroid linkage} \label{fig:1}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{CURE-T2-4K\label{fig:1a}}{\includegraphics[width=0.5\textwidth]{hclust-cure-ward-d.png}}\hfill
+\subcaptionbox{CLUTO-T8-8K\label{fig:1b}}{\includegraphics[width=0.5\textwidth]{hclust-cluto-ward-d.png}}
+\caption{Hierarchical Clustering based on Ward’s minimum variance method} \label{fig:1}
+\end{figure}
+
+
+
+\subsubsection{Fuzzy clustering Algorithm}
+The number of clusters have to be specified in advance and the clustering overlap is controlled by the fuzzifier parameter $m$. Random initialization was done with multiple repeats to avoid convergence to local minima. The approach was sensitive to noise and clusters were symmetric around the axes. Irregular shaped clusters were not detected.
+
+\begin{figure}[H]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{CURE-T2-4K\label{fig:1a}}{\includegraphics[width=0.5\textwidth]{fuzzy-cure.png}}\hfill
+\subcaptionbox{CLUTO-T8-8K\label{fig:1b}}{\includegraphics[width=0.5\textwidth]{fuzzy-cluto.png}}
+\caption{Fuzzy C-Means Clustering} \label{fig:1}
+\end{figure}
+
+
+
+\subsubsection{Model based clustering Algorithm}
+Performance of the Model based clustering algorithm was evaluated on the datasets with the final model configuration selected by 10-cross fold cross validation. The initial seeds were randomly assigned 12 times to avoid local optima.
+
+\begin{figure}[H]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{CURE-T2-4K\label{fig:1a}}{\includegraphics[width=0.5\textwidth]{cure-em.png}}\hfill
+\subcaptionbox{CLUTO-T8-8K\label{fig:1b}}{\includegraphics[width=0.5\textwidth]{cluto-em.png}}
+\caption{Clustering result of Model based clustering Algorithm} \label{fig:1}
+\end{figure}
+
+
+
+
+The mixture model based clustering has detected 8 clusters in CURE-T2-4K and 24 clusters in CLUTO-T8-8K as seen in Fig. 2 and incorrectly clustered instances were 50.23\% and 60.66\% respectively. A disadvantage of this approach was specification of the number of clusters initially.
+
+\subsubsection{Density based Clustering Algorithms}
+
+DBSCAN is parameter dependent and detected clusters of irregular shapes. It handled noise effectively. The key drawback is finding the right values of $\varepsilon$ and $MinPts$ for a particular dataset. The clusters having irregular densities and not well separated were merged in both datasets to give super clusters. OPTICS wasn't parameter sensitive and could identify clusters effectively.  
+
+\begin{figure}[H]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{CURE-T2-4K\label{fig:1a}}{\includegraphics[width=0.5\textwidth]{cure-dbs.png}}\hfill
+\subcaptionbox{CLUTO-T8-8K\label{fig:1b}}{\includegraphics[width=0.5\textwidth]{cluto-dbs.png}}
+\caption{Clustering result of DBSCAN Algorithm} \label{fig:1}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{CURE-T2-4K\label{fig:1a}}{\includegraphics[width=0.5\textwidth]{cure-optics.png}}\hfill
+\subcaptionbox{CLUTO-T8-8K\label{fig:1b}}{\includegraphics[width=0.5\textwidth]{cluto-optics.png}}
+\caption{Clustering result of OPTICS Algorithm} \label{fig:1}
+\end{figure}
+
+
+
+
+
+\subsubsection{Affinity Propagation Clustering}
+
+Advantage of Affinity propagation clustering is that number of clusters need not be specified in advance. The tunable parameter $q$ is input preference which can be interpreted as the tendency of a data sample to become an exemplar. Keeping the value minimum result in small number of clusters. In unsupervised setting, affinity propagation resulted in large number of clusters even with $q=0$. 
+
+\begin{figure}[H]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{CURE-T2-4K\label{fig:1a}}{\includegraphics[width=0.4\textwidth]{cure-ap.png}}\hfill
+\subcaptionbox{CLUTO-T8-8K\label{fig:1b}}{\includegraphics[width=0.4\textwidth]{cluto-ap.png}}
+\caption{Unsupervised Affinity Propagation Algorithm} \label{fig:1}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{CURE-T2-4K\label{fig:1a}}{\includegraphics[width=0.4\textwidth]{cure-ap.png}}\hfill
+\subcaptionbox{CLUTO-T8-8K\label{fig:1b}}{\includegraphics[width=0.4\textwidth]{cluto-ap.png}}
+\caption{Supervised Affinity Propagation Algorithm} \label{fig:1}
+\end{figure}
+
+
+
+ 
+
+\subsubsection{Spectral Clustering}
+
+The time complexity of spectral clustering is high O($n^3$) and so results on CLUTO-T8-8K could not be evaluated. On CURE-T2-4K dataset the algorithm could not identify clusters connected by a dense region. Noise points too were included in the clusters.  
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{cure-spec.png}
+\caption{Spectral Clustering}
+\label{fig 1}
+\end{figure}
+
+\subsection{Summary of Results}
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.3}
+\caption{Evaluation of clustering algorithms}
+\label{table}
+\centering
+\begin{tabular}{|c|c|c|c|}
+  \hline
+\multicolumn{1}{|c|}{\textbf{Name}} & \multicolumn{1}{c|}{\textbf{ Time Complexity}} & \multicolumn{1}{c|}{\textbf{Parameters}} & \multicolumn{1}{c|}{\textbf{Detect Asym Clusters}}  \\
+  \hline
+  KMeans & O($nkd$) & 1 & No\\
+  \hline
+  KMeans++ & O($nkd$) & 1 & No\\
+  \hline
+  Kernel KMeans & O($nkd$) & 1 & No\\
+  \hline
+  Hierarchical clustering & O($n^2logn$) & 1 & No\\
+  \hline
+  Fuzzy CMeans & O($n$) & 2 & No\\
+  \hline
+  Model based & O($knp$) & 2 & No\\
+  \hline
+  DBSCAN & O($nlogn$) & 2 & Yes\\
+  \hline
+  OPTICS & O($nlogn$) & 2 & Yes\\
+  \hline
+  Affinity propagation & O($n^2T$) & 2 & No\\
+  \hline
+  Spectral clustering & O($n^3$) & 2 & No\\
+ \hline
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+Cluster detection poses a challenge to algorithms especially when underlying model for formation of community structure is not available. This is the case in most real world situations and hence there is ambiguity regarding defining the term "cluster". Ideally the approach to clustering should not require user interference, however all the current clustering algorithms require parameter tuning and this could result in models that overfit the data and don't generalize well. The algorithms could not identify clusters in the benchmark datasets and had drawbacks like sensitivity to noise and outliers, high time and computational complexity and failure to detect clusters which were not well separated or of arbitrary shapes and densities.       
+
+
+
+
+
+
+
+
+

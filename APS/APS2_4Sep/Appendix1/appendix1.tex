@@ -1,0 +1,125 @@
+\chapter{Appendix I: Quaternions}
+
+There exists a correspondence between the orientation of a $ 3D $ object represented by a $ 3 \times 3 $ orthonormal matrix and unit quaternions in the group $ SO(3) $ \citep{Murray}. Quaternions give a global parametrization of $ SO(3) $, by using four numbers instead of three to represent a rotation. A quaternion is a vector quantity of the form,
+
+  \[Q=q_{0} + q_{1}i + q_{2}j + q_{3}k  \ \ \ \ \ \ \ \  qi \in \R, i = 0, . . . , 3,\] 
+                            
+where, $ q_{0} $ is the scalar component of $ Q $ and $ \vec{q}= (q_{1}, q_{2}, q_{3}) $ is the vector component. A convenient notation is $ Q = (q_{0}, \vec{q}) $ with $ q_{0} \in \R $, $ \vec{q} \in \R^{3} $.
+The set of quaternions Q is a 4-dimensional vector space over the reals and the unit quaternion form a group with respect to quaternion multiplication is a rotation group. Multiplication is distributive and associative, but not commutative.
+
+For rotation through an angle $ \theta $ about the axis $ n $, the Euler parameters are defined as \citep{Hanson},
+\begin{align*}
+e_{0}&=\cos(\theta / 2) \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ e_{2}=\cos \beta \cdot\sin (\theta / 2)\\
+e_{1}&=\cos \alpha \cdot\sin (\theta / 2) \ \ \ \ \ \ \ \ \ e_{3}=\cos \gamma \cdot\sin (\theta / 2)
+\end{align*}
+where, $ \alpha, \beta $ and $ \gamma $ are the elementary rotations about any given random axis.
+
+Given a rotation matrix $ R=exp\left(\hat{\omega}\theta \right) $, we define the associated unit quaternion as 
+$ Q = \cos (\theta / 2) $,  $ \omega\sin (\theta / 2) $
+where, $ \omega \in \R^{3} $ represents the unit axis of rotation and $ \theta \in \R^{3} $ represents the angle of rotation.
+Given a unit quaternion $ Q = \left(q_{0}, \vec{q} \right) $, we can extract the corresponding rotation by setting,
+
+\begin{center}
+\ \ \ \ \ $\theta = 2\cos ^{-1} q_{0}, \ \ \ \ \ \ \ 
+\omega = \left\lbrace
+\begin{array}{ll}
+\frac{\vec{q}}{\sin (\theta / 2)} & \mbox{if $ \theta \neq 0,$}\\
+0 & \mbox{otherwise,}
+\end{array}
+\right.\
+$
+\end{center}
+
+and  \[R = exp\left(\hat{\omega}\theta\right).\] 
+
+It is observed that the components of the quaternion are Euler parameters. The Euler parameters have a geometrical meaning and thus the same holds for the components of the corresponding unit quaternion.
+
+The Frenet 3D coordinate frame can be expressed in the form of quaternions. Assuming that the columns of the equation given below are the vectors $ [t_{i}, n_{i}, b_{i}] $ respectively, $ [q'(t)] $ can be written in the form,
+\begin{eqnarray}
+\left[ 
+\begin{array}{c}
+q_{o}'\\
+q_{1}'\\
+q_{2}'\\
+q_{3}'
+\end{array}
+\right]=
+\dfrac{v}{2} 
+\left[
+\begin{array}{cccc}
+0 & -\tau & 0 & -\kappa \\
+\tau & 0 & \kappa & 0 \\
+0 & -\kappa & 0 & \tau \\
+\kappa & 0 & -\tau & 0
+\end{array}
+\right] 
+\cdot
+\left[ 
+\begin{array}{c}
+q_{o}\\
+q_{1}\\
+q_{2}\\
+q_{3}
+\end{array}
+\right] 
+\label{13}
+\end{eqnarray}
+where $ v = \parallel \dot{c} \parallel $ and, 
+\begin{align*}
+q_{o}= \cos (\theta / 2) = \dfrac{1}{\sqrt{2}} & \sqrt{\cos \theta +1} = \dfrac{1}{2} \sqrt{Trace (R) +1} \\
+q_{1}=& \dfrac{R_{32}-R_{23}}{4q_{0}} \\
+q_{2}=& \dfrac{R_{13}-R_{31}}{4q_{0}} \\
+q_{3}=& \dfrac{R_{21}-R_{12}}{4q_{0}}
+\end{align*}
+
+Key properties of equation \ref{13} are \citep{Hanson},
+\begin{enumerate}
+\item The matrix on the right hand side is antisymmetric, so that $ q(t) \cdot q'(t)=0 $ is preserved and all unit quaternions remain unit quaternions as they are.
+\item Nine coupled equations with six orthonormality constraints are reduced to four coupled equations with a single constraint of unit length.
+\end{enumerate}
+
+From the above equation \ref{13}, the $ curvature $,
+\begin{equation}
+\kappa = - \left[\dfrac{2(q_{3}q'_{0}+q_{1}q'_{2})}{v(q_{1}^{2}+q_{3}^{2})} \right]
+\label{14} 
+\end{equation}
+and the $ torsion $,
+\begin{equation}
+\tau = \dfrac{2q'_{2}+v\kappa q_{1}}{vq_{3}}
+\label{15}
+\end{equation}
+can be extracted by the quaternion frame. The Frenet equations \ref{14} and \ref{15} may be integrated to generate a unique moving continuous frame along the protein backbone, for nonvanishing $ \kappa (t) $ with its space curve.
+
+\section*{Motivation for using Quaternions}
+
+\begin{enumerate}
+\item It can be observed that the description of Euler angles and exponential co-ordinates suffers from the problem of $ \textit{singularity} $ in certain situations \citep{Hanson}. The extraction of parameters from any given rotational transformation matrix produces a singular case as the maps being many to one. While with the unit quaternion, extraction of unit quaternion from given rotational transformation being unique, there is no such case in which the inverse produces singularity. In quaternion space, the scalars, vectors, and quaternions are unified. Besides this, spatial vector can be expressed in quaternion space provides us with elegant properties for manipulating equations.
+
+
+
+\item The quaternion frame summarizes nine matrix elements with six orthonormality constraints necessary to reduce the actual number of parameters of the frame to the three Euler angles. This forms a $ 3D $ orientation frame in terms of four quaternion frame variables with the single constraint of unit length that provides $ \textit{less computaional complexity} $.
+
+
+
+\item The Frenet frame is periodic but not globally defined. As soon as the inflection points \citep{shuangwei} occur in the plane it is observed that the normal components of the Frenet frame switches sign instantly, while the quaternion frame has no such abrupt changes. The Frenet frame becomes undefined when the curvature $ \left(\kappa\right) $, vanishes along a straight line segment or at inflection point. It provides no such prescription to define a smooth transition from the frame coming and leaving the straight segment. The quaternion frame is comparatively $ \textit{smooth} $ throughout.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../thesis"
+%%% End: 

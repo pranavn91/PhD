@@ -1,0 +1,85 @@
+\BOOKMARK [0][]{chapter*.1}{Contents}{}% 1
+\BOOKMARK [0][]{chapter*.2}{List of Figures}{}% 2
+\BOOKMARK [0][]{chapter*.3}{List of Tables}{}% 3
+\BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 4
+\BOOKMARK [1][]{section.1.1}{1.1 Online Social Networks: Research Issues}{chapter.1}% 5
+\BOOKMARK [0][]{chapter.2}{2 Modeling influence on a Social Network using Interaction Characteristics}{}% 6
+\BOOKMARK [1][]{section.2.1}{2.1 Introduction}{chapter.2}% 7
+\BOOKMARK [1][]{section.2.2}{2.2 Related Work}{chapter.2}% 8
+\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Twitterrank: finding topic-sensitive influential twitterers}{section.2.2}% 9
+\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Finding influencers using social capital}{section.2.2}% 10
+\BOOKMARK [2][]{subsection.2.2.3}{2.2.3 Geo-social Influence Spanning Maximization}{section.2.2}% 11
+\BOOKMARK [2][]{subsection.2.2.4}{2.2.4 Mining Time-Dependent Influential Users in Facebook Fans Group}{section.2.2}% 12
+\BOOKMARK [1][]{section.2.3}{2.3 Mathematical Model}{chapter.2}% 13
+\BOOKMARK [2][]{subsection.2.3.1}{2.3.1 Calculation of Influence Score}{section.2.3}% 14
+\BOOKMARK [2][]{subsection.2.3.2}{2.3.2 Model Representation}{section.2.3}% 15
+\BOOKMARK [3][]{subsubsection.2.3.2.1}{2.3.2.1 Artificial Neural Networks}{subsection.2.3.2}% 16
+\BOOKMARK [3][]{subsubsection.2.3.2.2}{2.3.2.2 Cost Function - Artificial Neural Networks}{subsection.2.3.2}% 17
+\BOOKMARK [3][]{subsubsection.2.3.2.3}{2.3.2.3 Gradient boosted trees}{subsection.2.3.2}% 18
+\BOOKMARK [3][]{subsubsection.2.3.2.4}{2.3.2.4 Gradient Boosted trees}{subsection.2.3.2}% 19
+\BOOKMARK [2][]{subsection.2.3.3}{2.3.3 Influence Ranking Algorithm}{section.2.3}% 20
+\BOOKMARK [1][]{section.2.4}{2.4 Experimental Study}{chapter.2}% 21
+\BOOKMARK [2][]{subsection.2.4.1}{2.4.1 Experiment setting}{section.2.4}% 22
+\BOOKMARK [3][]{subsubsection.2.4.1.1}{2.4.1.1 Dataset}{subsection.2.4.1}% 23
+\BOOKMARK [2][]{subsection.2.4.2}{2.4.2 Results}{section.2.4}% 24
+\BOOKMARK [1][]{section.2.5}{2.5 Conclusion}{chapter.2}% 25
+\BOOKMARK [0][]{chapter.3}{3 A Comparative Analysis of Community Detection Algorithms on Social Networks}{}% 26
+\BOOKMARK [1][]{section.3.1}{3.1 Introduction}{chapter.3}% 27
+\BOOKMARK [1][]{section.3.2}{3.2 Community Detection Algorithms}{chapter.3}% 28
+\BOOKMARK [2][]{subsection.3.2.1}{3.2.1 Walktrap - Computing communities in large networks using random walks}{section.3.2}% 29
+\BOOKMARK [2][]{subsection.3.2.2}{3.2.2 Finding community structure in very large networks}{section.3.2}% 30
+\BOOKMARK [2][]{subsection.3.2.3}{3.2.3 Finding and evaluating community structure in networks}{section.3.2}% 31
+\BOOKMARK [2][]{subsection.3.2.4}{3.2.4 Near linear time algorithm to detect community structures in large-scale networks}{section.3.2}% 32
+\BOOKMARK [2][]{subsection.3.2.5}{3.2.5 Fast unfolding of communities in large networks}{section.3.2}% 33
+\BOOKMARK [2][]{subsection.3.2.6}{3.2.6 Statistical mechanics of community detection}{section.3.2}% 34
+\BOOKMARK [2][]{subsection.3.2.7}{3.2.7 Finding community structure in networks using the eigenvectors of matrices}{section.3.2}% 35
+\BOOKMARK [2][]{subsection.3.2.8}{3.2.8 Maps of random walks on complex networks reveal community structure}{section.3.2}% 36
+\BOOKMARK [1][]{section.3.3}{3.3 Experiments}{chapter.3}% 37
+\BOOKMARK [2][]{subsection.3.3.1}{3.3.1 Dataset}{section.3.3}% 38
+\BOOKMARK [2][]{subsection.3.3.2}{3.3.2 Results}{section.3.3}% 39
+\BOOKMARK [2][]{subsection.3.3.3}{3.3.3 Edit Distance metric}{section.3.3}% 40
+\BOOKMARK [1][]{section.3.4}{3.4 Conclusion}{chapter.3}% 41
+\BOOKMARK [0][]{chapter.4}{4 Empirical Analysis of Data Clustering Algorithms}{}% 42
+\BOOKMARK [1][]{section.4.1}{4.1 Introduction}{chapter.4}% 43
+\BOOKMARK [1][]{section.4.2}{4.2 Types of Clustering Algorithms}{chapter.4}% 44
+\BOOKMARK [2][]{subsection.4.2.1}{4.2.1 Partition based clustering algorithms}{section.4.2}% 45
+\BOOKMARK [2][]{subsection.4.2.2}{4.2.2 Hierarchical Clustering algorithms}{section.4.2}% 46
+\BOOKMARK [2][]{subsection.4.2.3}{4.2.3 Fuzzy clustering}{section.4.2}% 47
+\BOOKMARK [2][]{subsection.4.2.4}{4.2.4 Model Based Clustering Algorithms}{section.4.2}% 48
+\BOOKMARK [2][]{subsection.4.2.5}{4.2.5 Grid Based Clustering Algorithm}{section.4.2}% 49
+\BOOKMARK [2][]{subsection.4.2.6}{4.2.6 Density based clustering algorithms}{section.4.2}% 50
+\BOOKMARK [2][]{subsection.4.2.7}{4.2.7 Affinity Propagation Clustering}{section.4.2}% 51
+\BOOKMARK [2][]{subsection.4.2.8}{4.2.8 Affiliation Graph Model}{section.4.2}% 52
+\BOOKMARK [2][]{subsection.4.2.9}{4.2.9 Spectral Clustering}{section.4.2}% 53
+\BOOKMARK [1][]{section.4.3}{4.3 Experiments}{chapter.4}% 54
+\BOOKMARK [2][]{subsection.4.3.1}{4.3.1 Dataset}{section.4.3}% 55
+\BOOKMARK [2][]{subsection.4.3.2}{4.3.2 Experimental Results}{section.4.3}% 56
+\BOOKMARK [3][]{subsubsection.4.3.2.1}{4.3.2.1 Partition based clustering Algorithm}{subsection.4.3.2}% 57
+\BOOKMARK [3][]{subsubsection.4.3.2.2}{4.3.2.2 Hierarchical clustering Algorithms}{subsection.4.3.2}% 58
+\BOOKMARK [3][]{subsubsection.4.3.2.3}{4.3.2.3 Fuzzy clustering Algorithm}{subsection.4.3.2}% 59
+\BOOKMARK [3][]{subsubsection.4.3.2.4}{4.3.2.4 Model based clustering Algorithm}{subsection.4.3.2}% 60
+\BOOKMARK [3][]{subsubsection.4.3.2.5}{4.3.2.5 Density based Clustering Algorithms}{subsection.4.3.2}% 61
+\BOOKMARK [3][]{subsubsection.4.3.2.6}{4.3.2.6 Affinity Propagation Clustering}{subsection.4.3.2}% 62
+\BOOKMARK [3][]{subsubsection.4.3.2.7}{4.3.2.7 Spectral Clustering}{subsection.4.3.2}% 63
+\BOOKMARK [2][]{subsection.4.3.3}{4.3.3 Summary of Results}{section.4.3}% 64
+\BOOKMARK [1][]{section.4.4}{4.4 Conclusion}{chapter.4}% 65
+\BOOKMARK [0][]{chapter.5}{5 Community Detection using Node Attributes: A Non-Negative Matrix Factorization Approach.}{}% 66
+\BOOKMARK [1][]{section.5.1}{5.1 Introduction}{chapter.5}% 67
+\BOOKMARK [1][]{section.5.2}{5.2 Related Work}{chapter.5}% 68
+\BOOKMARK [1][]{section.5.3}{5.3 Mathematical Model}{chapter.5}% 69
+\BOOKMARK [2][]{subsection.5.3.1}{5.3.1 Calculate the latent weights of the attributes}{section.5.3}% 70
+\BOOKMARK [1][]{section.5.4}{5.4 Experiments}{chapter.5}% 71
+\BOOKMARK [2][]{subsection.5.4.1}{5.4.1 Dataset and Evaluation Criteria}{section.5.4}% 72
+\BOOKMARK [2][]{subsection.5.4.2}{5.4.2 Experimental Results}{section.5.4}% 73
+\BOOKMARK [3][]{subsubsection.5.4.2.1}{5.4.2.1 InfoMap}{subsection.5.4.2}% 74
+\BOOKMARK [3][]{subsubsection.5.4.2.2}{5.4.2.2 Leading Eigenvector}{subsection.5.4.2}% 75
+\BOOKMARK [3][]{subsubsection.5.4.2.3}{5.4.2.3 Label Propagation}{subsection.5.4.2}% 76
+\BOOKMARK [3][]{subsubsection.5.4.2.4}{5.4.2.4 Walktrap}{subsection.5.4.2}% 77
+\BOOKMARK [3][]{subsubsection.5.4.2.5}{5.4.2.5 Spinglass and Clique Percolation}{subsection.5.4.2}% 78
+\BOOKMARK [2][]{subsection.5.4.3}{5.4.3 Community Structures}{section.5.4}% 79
+\BOOKMARK [2][]{subsection.5.4.4}{5.4.4 Variation of BIGCLAM}{section.5.4}% 80
+\BOOKMARK [1][]{section.5.5}{5.5 Conclusion}{chapter.5}% 81
+\BOOKMARK [0][]{chapter.6}{6 Summary}{}% 82
+\BOOKMARK [1][]{section.6.1}{6.1 Future Work}{chapter.6}% 83
+\BOOKMARK [0][]{chapter.7}{7 Publications}{}% 84
+\BOOKMARK [0][]{chapter*.56}{References}{}% 85
