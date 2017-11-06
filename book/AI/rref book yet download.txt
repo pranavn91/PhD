@@ -1,0 +1,8 @@
+References :
+1. Reinforcement and Systemic Machine Learning for Decision Making, Parag Kulkarni, July 
+2012, Wiley-IEEE Press, ISBN: 978-0-470-91999-6
+2. Introduction to Machine Learning, Ethem ALPAYDIN, The MIT Press, October 2004, ISBN 
+0-262-01211-1
+3. Machine Learning, Tom Mitchell, McGraw Hill, 1997.
+4. The Elements of Statistical Learning: Data Mining, Trevor Hastie, Robert Tibshirani, Jerome 
+Friedman, Inference, and Prediction, Second Edition, February 2009
