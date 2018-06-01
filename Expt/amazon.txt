@@ -1,0 +1,80 @@
+Id:   513954
+ASIN: 0789447096
+  title: 1,000 Makers of the Millennium: The Men and Women Who Have Shaped the Last 1,000 Years
+  group: Book
+  salesrank: 831366
+  similar: 0
+  categories: 1
+   |Books[283155]|Subjects[1000]|Children's Books[4]|Ages 9-12[2786]|General[170063]
+  reviews: total: 2  downloaded: 2  avg rating: 3.5
+    2000-4-3  cutomer: A1PN4N5OC3GET7  rating: 5  votes:  11  helpful:   6
+    2000-11-25  cutomer: A18C5AJ277PFVO  rating: 2  votes:  14  helpful:  14
+
+	
+	Id:   513955
+ASIN: 1582450099
+  title: Dog-Friendly Dog Training (Howell Reference Books)
+  group: Book
+  salesrank: 125168
+  similar: 5  0764566342  189176702X  1888047054  0345446798  1891767003
+  categories: 5
+   |Books[283155]|Subjects[1000]|Home & Garden[48]|Animal Care & Pets[5043]|Dogs[5049]|Breeds[5050]
+   |Books[283155]|Subjects[1000]|Home & Garden[48]|Animal Care & Pets[5043]|Dogs[5049]|Care & Health[5051]
+   |Books[283155]|Subjects[1000]|Home & Garden[48]|Animal Care & Pets[5043]|Dogs[5049]|General[5052]
+   |Books[283155]|Subjects[1000]|Home & Garden[48]|Animal Care & Pets[5043]|Dogs[5049]|Training[5053]
+   |Books[283155]|Subjects[1000]|Home & Garden[48]|Animal Care & Pets[5043]|General[5056]
+  reviews: total: 15  downloaded: 15  avg rating: 4
+    1999-12-11  cutomer: A205FTLKNR2JNE  rating: 4  votes:  16  helpful:  15
+    2000-2-20  cutomer: A1FW9QH4TQ6N40  rating: 5  votes:  10  helpful:  10
+    2000-2-21  cutomer: A1ZF1PMA3Q9CFF  rating: 5  votes:  22  helpful:  22
+    2000-9-2  cutomer: A217AKTABNWVP0  rating: 1  votes:  13  helpful:   3
+    2000-10-4  cutomer:  A4MW11CHHXGKL  rating: 5  votes:   6  helpful:   6
+    2001-6-14  cutomer:  AGSGXHQP9MV8A  rating: 5  votes:   2  helpful:   2
+    2001-9-6  cutomer: A2HZ7QF9FWEDXM  rating: 5  votes:   7  helpful:   7
+    2002-1-3  cutomer: A102HQ38U10PPZ  rating: 5  votes:   2  helpful:   2
+    2002-10-8  cutomer: A2HOW5Z1KWSCMY  rating: 1  votes:   3  helpful:   0
+    2002-10-14  cutomer:  AVGEIIMOPZKZR  rating: 5  votes:   0  helpful:   0
+    2002-11-16  cutomer: A2N3LM1M0ZM3XY  rating: 5  votes:   1  helpful:   1
+    2003-11-25  cutomer:  AEFF2UM0WV5NN  rating: 4  votes:   5  helpful:   4
+    2004-3-10  cutomer: A2T2BYO3QWREJI  rating: 3  votes:   4  helpful:   0
+    2004-8-16  cutomer: A1A2VJZLORRZPW  rating: 5  votes:   2  helpful:   2
+    2004-11-3  cutomer: A329P0X2FT98SD  rating: 4  votes:   3  helpful:   3
+
+	
+	Id:   513958
+ASIN: 0156717204
+  title: The Philosophy of Andy Warhol
+  group: Book
+  salesrank: 28606
+  similar: 5  0156729601  0446391387  0802135536  B000092T3B  0810943298
+  categories: 4
+   |Books[283155]|Subjects[1000]|Arts & Photography[1]|Artists, A-Z[1104]|( V-Z )[1440]|Warhol, Andy[1455]
+   |Books[283155]|Subjects[1000]|Biographies & Memoirs[2]|Arts & Literature[2327]|Artists, Architects & Photographers[2329]
+   |Books[283155]|Subjects[1000]|Biographies & Memoirs[2]|General[2375]
+   |Books[283155]|Subjects[1000]|Arts & Photography[1]|Artists, A-Z[1104]|General[585494]
+  reviews: total: 25  downloaded: 5  avg rating: 4.5
+    2003-11-25  cutomer: A17N2NQY2H19CB  rating: 5  votes:   0  helpful:   0
+    2004-3-7  cutomer: A2QUK79K7IH3U7  rating: 5  votes:   4  helpful:   3
+    2004-12-6  cutomer:  AFLPMS5K3DZL5  rating: 5  votes:   2  helpful:   2
+    2005-4-4  cutomer:  ALP77EQ4CWQDT  rating: 5  votes:   0  helpful:   0
+    2005-4-19  cutomer:  ADTAINNCOFYYQ  rating: 5  votes:   0  helpful:   0
+
+	
+Id:   513959
+ASIN: 0766827100
+  title: Delmar's Integrative Herb Guide for Nurses
+  group: Book
+  salesrank: 791574
+  similar: 4  0970031203  0130281646  0316604429  0345379748
+  categories: 9
+   |Books[283155]|Subjects[1000]|Health, Mind & Body[10]|Alternative Medicine[4696]|General[4701]
+   |Books[283155]|Subjects[1000]|Medicine[13996]|Alternative & Holistic[14038]|General[14046]
+   |Books[283155]|Subjects[1000]|Medicine[13996]|Alternative & Holistic[14038]|Holistic Medicine[14050]
+   |Books[283155]|Subjects[1000]|Medicine[13996]|Nursing[14191]|Pharmacology[14233]
+   |Books[283155]|Subjects[1000]|Medicine[13996]|Nursing[14191]|Reference[14237]
+   |Books[283155]|Subjects[1000]|Professional & Technical[173507]|Medical[173514]|Alternative Medicine[227583]|General[227584]
+   |Books[283155]|Subjects[1000]|Professional & Technical[173507]|Medical[173514]|Alternative Medicine[227583]|Holistic Medicine[227589]
+   |Books[283155]|Subjects[1000]|Professional & Technical[173507]|Medical[173514]|Nursing[227640]|Pharmacology[227661]
+   |Books[283155]|Subjects[1000]|Professional & Technical[173507]|Medical[173514]|Nursing[227640]|Reference[227663]
+  reviews: total: 1  downloaded: 1  avg rating: 5
+    2002-10-4  cutomer: A20OMTKP93RXEC  rating: 5  votes:   2  helpful:   2
